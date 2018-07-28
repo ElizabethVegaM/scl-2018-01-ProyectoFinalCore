@@ -19,7 +19,73 @@
 </head>
 
 <body>
-  <!--  -->
+  <!-- Sección de bienvenida -->
+  <section id="welcome" class="container-fluid">
+    <div class="init">
+      <img src="assets/img/logo.png" alt="logo if">
+      <button id="toRegisterBtn">Registrar entrada</button>
+    </div>
+  </section>
+  <!-- Sección de registro -->
+  <section id="register" class="d-none">
+    <form>
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="visitorName" placeholder="Ingrese nombre">
+      </div>
+      <div class="form-group">
+        <label for="rut">RUT</label>
+        <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Correo</label>
+        <input type="email" class="form-control" id="visitorEmail" aria-describedby="emailHelp" placeholder="Ingrese correo">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCompany">Empresa a visitar</label>
+          <select id="inputCompany" class="form-control">
+            <option selected>Seleccionar</option>
+            <option>Elestudio</option>
+            <option>Robotics Lab</option>
+            <option>Fábrica de Medios</option>
+            <option>Café Altura</option>
+            <option>Laboratoria</option>
+            <option>Fundación Mustakis</option>
+            <option>Destilería Húsares</option>
+            <option>Aguas Lab</option>
+            <option>Wild Projec Chile</option>
+            <option>Deseis</option>
+            <option>cdi</option>
+            <option>Tremenda</option>
+            <option>Ilegal</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmployee">Representante</label>
+          <select id="inputEmployee" class="form-control">
+            <option selected>Seleccionar</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputCompany">Motivo de la visita</label>
+        <select id="inputCompany" class="form-control">
+          <option selected>Seleccionar</option>
+          <option>Entrevista</option>
+          <option>Reunión</option>
+          <option>Social</option>
+          <option>Proveedor</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">REGISTRAR</button>
+    </form>
+  </section>
+
+
+
+
 
 
 
@@ -27,12 +93,12 @@
   <script>
     // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyDDPfdzZ-OL-5U1ZFgYEJd40Di3WdR36Wc",
-      authDomain: "social-network-d7373.firebaseapp.com",
-      databaseURL: "https://social-network-d7373.firebaseio.com",
-      projectId: "social-network-d7373",
-      storageBucket: "social-network-d7373.appspot.com",
-      messagingSenderId: "188592192471"
+      apiKey: "AIzaSyB7HPBkWvYlZpRizNk6O06G1xu6qcmC-iI",
+      authDomain: "registro-visitantes.firebaseapp.com",
+      databaseURL: "https://registro-visitantes.firebaseio.com",
+      projectId: "registro-visitantes",
+      storageBucket: "registro-visitantes.appspot.com",
+      messagingSenderId: "280699437997"
     };
     firebase.initializeApp(config);
   </script>
@@ -44,9 +110,9 @@
     crossorigin="anonymous"></script>
   <script src="assets/js/events.js"></script>
   <script src="assets/js/auth.js"></script>
-  <script src="assets/js/profile.js"></script>
-  <script src="assets/js/chat.js"></script>
-  <script src="assets/js/tab.js"></script>
+  <script src="assets/js/register.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/jquery.rut.chileno.min.js"></script>
 </body>
 
 </html>
