@@ -28,6 +28,14 @@
   </section>
   <!-- Sección de registro -->
   <section id="register" class="d-none">
+    <div class="circle">
+      <img id="profilePic" class="profile-pic" src="">
+    </div>
+    <form id="cameraIcon" action="#" class="row">
+      <label class="cameraButton"><i class="fas fa-camera"></i>
+        <input type="file" accept="image/*;capture=camera">
+      </label>
+    </form>
     <form>
       <div class="form-group">
         <label for="name">Nombre</label>
@@ -65,6 +73,9 @@
           <label for="inputEmployee">Representante</label>
           <select id="inputEmployee" class="form-control">
             <option selected>Seleccionar</option>
+            <option>Carolina Delgado (carolinadelgadob@gmail.com)</option>
+            <option>Cindy López (cindy.lopezoportus@gmail.com)</option>
+            <option>Elizabeth Vega (eb.vega.m@gmail.com)</option>
           </select>
         </div>
       </div>
@@ -82,12 +93,6 @@
       <button type="submit" class="btn btn-primary">REGISTRAR</button>
     </form>
   </section>
-
-
-
-
-
-
 
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
