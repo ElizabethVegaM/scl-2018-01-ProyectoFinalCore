@@ -39,7 +39,7 @@
     <form>
       <div class="form-group">
         <label for="name">Nombre</label>
-        <input type="text" class="form-control" id="visitorName" placeholder="Ingrese nombre">
+        <input id="visitorName" type="text" class="form-control" placeholder="Ingrese nombre">
       </div>
       <div class="form-group">
         <label for="rut">RUT</label>
@@ -47,7 +47,7 @@
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Correo</label>
-        <input type="email" class="form-control" id="visitorEmail" aria-describedby="emailHelp" placeholder="Ingrese correo">
+        <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo">
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
@@ -80,8 +80,8 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="inputCompany">Motivo de la visita</label>
-        <select id="inputCompany" class="form-control">
+        <label for="inputReason">Motivo de la visita</label>
+        <select id="inputReason" class="form-control">
           <option selected>Seleccionar</option>
           <option>Entrevista</option>
           <option>Reunión</option>
@@ -90,7 +90,7 @@
           <option>Otro</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">REGISTRAR</button>
+      <button id="registerUser" type="button" class="btn btn-primary">REGISTRAR</button>
     </form>
   </section>
 
