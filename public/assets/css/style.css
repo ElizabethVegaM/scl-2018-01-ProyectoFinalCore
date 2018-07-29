@@ -55,6 +55,9 @@ body {
   background-position: center;
   
   }
-
+  #welcome, #register {
+    width: 80vw;
+    height: 100vh;
+  }
   
 }
