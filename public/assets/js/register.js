@@ -62,17 +62,11 @@ registerUser.addEventListener('click', () => {
     licensePlate: licensePlate,
     companyToVisit: company,
     reason: reason,
-    photo: photoURL
+    photo: photoURL,
+    time: Date.now()
   });
-  /*
   welcome.classList.add('d-none');
   succes.classList.remove('d-none');
   register.classList.add('d-none');
-  */
 });
 
-firebase.database().ref('visitors')
-  .limitToLast(10)
-  .on('child_added', (newVisitor) => {
-    console.log(newVisitor.val());
-  });

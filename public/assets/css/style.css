@@ -129,7 +129,7 @@ h1{
 }
 
 #dashboard{
-
+  height: inherit;
 }
 
 .dashHeader{
@@ -145,7 +145,7 @@ h1{
   position: fixed;
   top: 65px;
   left: 220px;
-  width: 25%;
+  width: 20%;
   margin-left: -220px;
   border: none;
   border-radius: 0;
@@ -166,12 +166,42 @@ h1{
   border-color: #dee2e6 #dee2e6 #fff;
 }
 
+.avatar-pic {
+  float: left;
+  margin-right: 2%;
+  width: 35%;
+  height: 65px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  background-color: #222;
+}
+
 .tab-content{
   background-color: #fafafa;
   position: fixed;
   top: 70px;
-  left: 210px;
-  width: 70%;
+  left: 170px;
+  width: 75%;
+  height: auto;
+}
+
+table{
+  width: 90%;
+}
+
+#visit{
+  padding: 2% 10%;
+  width: 40%;
+}
+
+td{
+  padding: 1%;
+}
+
+td p {
+  margin: 1%;
 }
 
 @media screen and (min-width: 750px) {
