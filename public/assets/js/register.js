@@ -45,27 +45,6 @@ registerUser.addEventListener('click', () => {
   });
 });
 
-
-function updatePhoto() {
-  firebase.storage().ref().child(firebase.auth().currentUser.Nb.email + '/profilePic.jpeg').getDownloadURL().then(function(url) {
-    firebase.auth().currentUser.updateProfile({
-      photoURL: url
-    }).then(function() {
-      firebase.database().ref(`users/${firebase.auth().currentUser.uid}`).update({
-        profilePicture: firebase.auth().currentUser.photoURL
-      });
-      profilePic.src = url;
-      saveChanges.classList.add('d-none');
-      updatePic.classList.add('d-none');
-    }).catch(function(error) {
-      console.log('Ha ocurrido un error' + error);
-    });
-  });
-};
-
-
-
-
 firebase.database().ref('visitors')
   .limitToLast(10)
   .on('child_added', (newVisitor) => {
