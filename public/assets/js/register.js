@@ -17,7 +17,7 @@ const dataEmployee = () => {
       console.log(employees);
     });
 };
-
+/*
 inputCompany.addEventListener('click', () => {
   inputEmployee.innerHTML = '';
   for (let i = 0; i < employees.length; i++) {
@@ -26,6 +26,7 @@ inputCompany.addEventListener('click', () => {
     }      
   }
 });
+*/
 
 // Registrar nuevos visitantes
 photo.addEventListener('change', function(event) {
