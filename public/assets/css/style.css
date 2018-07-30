@@ -191,9 +191,22 @@ table{
   width: 90%;
 }
 
+#close-tab{
+  position: fixed;
+  bottom: 2px;
+}
+
 #visit{
   padding: 2% 10%;
   width: 40%;
+}
+
+.bold-blue {
+	font-weight: bold;
+	color: #0277BD;
+}
+#bodyDashboard{
+  overflow: auto;
 }
 
 td{
