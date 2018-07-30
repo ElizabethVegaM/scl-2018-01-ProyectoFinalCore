@@ -31,9 +31,11 @@ Dentro de la carpeta UX, se encuentran:
 
 * Entrevistas a Usuarios (Documentos).
 * Entrevistas a Usuarios (Grabaciones).
-* Definición de Usuario.
+* Definición de Usuario. (Documento PDF).
 * Sketch Baja Fidelidad.
 * Sketch Alta Fidelidad.
 * Grabación de Test de Usabilidad.
-* Script de Usabilidad.
+* Fotos cliente incognito. (Documento PDF).
+* Script de Usabilidad. (Documento PDF).
+* User Story Mapping.
 * Benchmark.
