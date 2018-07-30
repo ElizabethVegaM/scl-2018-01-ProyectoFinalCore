@@ -1,6 +1,5 @@
 window.onload = () => {
   dataEmployee();
-  dataVisit()
 };
 
 // Validar rut
@@ -29,7 +28,8 @@ registerUser.addEventListener('click', () => {
     company: inputCompany.value,
     employeeToVisit: inputEmployee.value,
     reason: inputReason.value,
-    photo: 'hay que poner algo mientras'
+    photo: 'hay que poner algo mientras',
+    time: Date.now()
   });    
 });
 
