@@ -11,6 +11,8 @@ body {
 }
 .logoBackground{
   background-color:  rgba(0, 0, 0, 0.726);
+  width: auto;
+  text-align: center;
 }
 #toRegisterBtn{
   margin-top: 35vh;
@@ -54,8 +56,7 @@ body {
   display: block;
 }
 
-@media screen and (min-width: 750px)
-and (orientation : portrait) {
+@media screen and (min-width: 750px) {
   body{
   background-image: url(../img/if.jpg);
   background-size: cover;
@@ -68,3 +69,11 @@ and (orientation : portrait) {
   }
   
 }
+/*Ipad de pie*/
+@media screen and (min-width: 1024px) {
+  body{
+    background-image: url(../img/if.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+ }
