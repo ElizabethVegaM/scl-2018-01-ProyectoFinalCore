@@ -7,3 +7,4 @@ loginBtn.addEventListener('click', () =>{
   welcome.classList.add('d-none');
   dashboard.classList.remove('d-none');
 });
+

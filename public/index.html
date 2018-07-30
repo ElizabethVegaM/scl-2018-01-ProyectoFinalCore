@@ -34,7 +34,7 @@
       </form>
     </div>
   </section>
-  
+
   <!-- Sección de registro -->
   <section id="register" class="d-none">
     <div class="circle">
@@ -43,39 +43,38 @@
     <form id="cameraIcon" action="#" class="row">
       <label class="cameraButton">
         <i class="fas fa-camera"></i>
-        <input id="photo" type="file" accept="image/*;capture=camera">
+        <input id="photo" type="file" accept="image/*;capture=camera" required>
       </label>
     </form>
     <form>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="name">Nombre</label>
-          <input id="visitorName" type="text" class="form-control" placeholder="Ingrese nombre">
+          <input id="visitorName" type="text" class="form-control" placeholder="Ingrese nombre" required>
         </div>
         <div class="form-group col-md-6">
           <label for="rut">RUT</label>
-          <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT">
+          <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT" required>
         </div>
       </div>
       <div class="form-group">
         <label for="visitorEmail">Correo</label>
-        <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo">
+        <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo" required>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="visitorCompany">Empresa</label>
-          <input id="visitorCompany" type="text" class="form-control" placeholder="Ingrese empresa">
+          <input id="visitorCompany" type="text" class="form-control" placeholder="Ingrese empresa" required>
         </div>
         <div class="form-group col-md-6">
           <label for="visitorLicensePlate">Patente vehículo (en caso de usar estacionamiento)</label>
-          <input id="visitorLicensePlate" type="text" class="form-control" placeholder="Ingrese patente">
+          <input id="visitorLicensePlate" type="text" class="form-control" placeholder="Ingrese patente" required>
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group col-md-6">
+        <div id="companyContainer" class="form-group col-md-6">
           <label for="inputCompany">Empresa a visitar</label>
-          <select id="inputCompany" class="form-control">
-            <option selected>Seleccionar</option>
+          <select id="inputCompany" class="form-control" size="5" required>
             <option>Elestudio</option>
             <option>Robotics Lab</option>
             <option>Fábrica de Medios</option>
@@ -84,7 +83,7 @@
             <option>Fundación Mustakis</option>
             <option>Destilería Húsares</option>
             <option>Aguas Lab</option>
-            <option>Wild Projec Chile</option>
+            <option>Wild Project Chile</option>
             <option>Deseis</option>
             <option>cdi</option>
             <option>Tremenda</option>
@@ -93,18 +92,13 @@
         </div>
         <div class="form-group col-md-6">
           <label for="inputEmployee">Representante</label>
-          <select id="inputEmployee" class="form-control">
-            <option selected>Seleccionar</option>
-            <option>Carolina Delgado (carolinadelgadob@gmail.com)</option>
-            <option>Cindy López (cindy.lopezoportus@gmail.com)</option>
-            <option>Elizabeth Vega (eb.vega.m@gmail.com)</option>
+          <select id="inputEmployee" class="form-control" size="3" required>
           </select>
         </div>
       </div>
       <div class="form-group">
         <label for="inputReason">Motivo de la visita</label>
-        <select id="inputReason" class="form-control">
-          <option selected>Seleccionar</option>
+        <select id="inputReason" class="form-control" required>
           <option>Entrevista</option>
           <option>Reunión</option>
           <option>Social</option>
@@ -112,9 +106,10 @@
           <option>Otro</option>
         </select>
       </div>
-      <button id="registerUser" type="button" class="btn btn-primary">REGISTRAR</button>
+      <button id="registerUser" type="submit" class="btn btn-primary">REGISTRAR</button>
     </form>
   </section>
+  <!-- Dashboard -->
   <section class="d-none" id="dashboard">
     <div>
       <ul id="dashboardList"></ul>

@@ -14,14 +14,24 @@ const dataEmployee = () => {
     .then(response => response.json())
     .then(data => {
       employees = data;
-      console.log(employees);      
+      console.log(employees);
     });
 };
+
+inputCompany.addEventListener('click', () => {
+  inputEmployee.innerHTML = '';
+  for (let i = 0; i < employees.length; i++) {
+    console.log(employees[i].empresa);
+    if (inputCompany.value === employees[i].empresa) {
+      inputEmployee.innerHTML += `<option>${employees[i].empleado}(${employees[i].contacto})</option>`;
+    }      
+  }
+});
 
 // Registrar nuevos visitantes
 photo.addEventListener('change', function(event) {
   let storageRef = firebase.storage().ref().child(`visitorsPhoto/${visitorRut.value}.jpeg`);
-  let firstFile = event.target.files[0]; 
+  let firstFile = event.target.files[0];
   storageRef.put(firstFile);
   storageRef.getDownloadURL().then(function(url) {
     profilePic.src = url;
@@ -30,23 +40,34 @@ photo.addEventListener('change', function(event) {
   });
 });
 
-registerUser.addEventListener('click', () => {
+registerUser.addEventListener('submit', () => {
+  visitor = visitorName.value;
+  rut = visitorRut.value;
+  email = visitorEmail.value;
+  visitorCompany = visitorCompany.value;
+  licensePlate = visitorLicensePlate.value;
+  company = inputCompany.value;
+  employee = inputEmployee.value;
+  reason = inputReason.value;
+  photo = profilePic.src;
+  // if (visitor.length === 0 || rut.length === 0 || email.length === 0 || company === 'Seleccionar' || employee.length === 0 || reason.length === 0 || photo.length === 0) {}
   const newUserKey = firebase.database().ref().child('visitors').push().key;
   firebase.database().ref(`visitors/${newUserKey}`).set({
-    name: visitorName.value,
-    rut: visitorRut.value,
-    email: visitorEmail.value,
-    company: visitorCompany.value,
-    licensePlate: visitorLicensePlate.value,
-    companyToVisit: inputCompany.value,
-    employeeToVisit: inputEmployee.value,
-    reason: inputReason.value,
-    photo: profilePic.src
+    name: visitor,
+    rut: rut,
+    email: email,
+    company: visitorCompany,
+    licensePlate: licensePlate,
+    companyToVisit: company,
+    employeeToVisit: employee,
+    reason: reason,
+    photo: photo
   });
+  
 });
 
 firebase.database().ref('visitors')
   .limitToLast(10)
   .on('child_added', (newVisitor) => {
-    console.log(newVisitor.val());  
+    console.log(newVisitor.val());
   });
