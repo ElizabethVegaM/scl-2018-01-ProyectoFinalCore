@@ -28,12 +28,9 @@ registerUser.addEventListener('click', () => {
     company: inputCompany.value,
     employeeToVisit: inputEmployee.value,
     reason: inputReason.value,
-    photo: 'hay que poner algo mientras'
-  });
+    photo: 'hay que poner algo mientras',
+    time: Date.now()
+  });    
 });
 
-firebase.database().ref('visitors')
-  .limitToLast(10)
-  .on('child_added', (newVisitor) => {
-    console.log(newVisitor);  
-  });
+
