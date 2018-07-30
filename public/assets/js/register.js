@@ -62,5 +62,8 @@ registerUser.addEventListener('submit', () => {
     reason: reason,
     photo: photo
   });
+  welcome.classList.add('d-none');
+  succes.classList.remove('d-none');
+  register.classList.add('d-none');
 });
 
