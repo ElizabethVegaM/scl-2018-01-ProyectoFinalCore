@@ -3,7 +3,7 @@ toRegisterBtn.addEventListener('click', () => {
   register.classList.remove('d-none');
 });
 
-loginBtn.addEventListener('click', () =>{
+data.addEventListener('click', () =>{
   welcome.classList.add('d-none');
   dashboard.classList.remove('d-none');
 }) 
