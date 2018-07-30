@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 // Traer archivo de empleados
 let employees = {};
 const dataEmployee = () => {
-  fetch('../../../data/employees.json')
+  fetch('../data/employees.json')
     .then(response => response.json())
     .then(data => {
       employees = data;
@@ -21,7 +21,6 @@ const dataEmployee = () => {
 inputCompany.addEventListener('click', () => {
   inputEmployee.innerHTML = '';
   for (let i = 0; i < employees.length; i++) {
-    console.log(employees[i].empresa);
     if (inputCompany.value === employees[i].empresa) {
       inputEmployee.innerHTML += `<option>${employees[i].empleado}(${employees[i].contacto})</option>`;
     }      
@@ -50,7 +49,6 @@ registerUser.addEventListener('submit', () => {
   employee = inputEmployee.value;
   reason = inputReason.value;
   photo = profilePic.src;
-  // if (visitor.length === 0 || rut.length === 0 || email.length === 0 || company === 'Seleccionar' || employee.length === 0 || reason.length === 0 || photo.length === 0) {}
   const newUserKey = firebase.database().ref().child('visitors').push().key;
   firebase.database().ref(`visitors/${newUserKey}`).set({
     name: visitor,
@@ -63,7 +61,6 @@ registerUser.addEventListener('submit', () => {
     reason: reason,
     photo: photo
   });
-  
 });
 
 firebase.database().ref('visitors')
