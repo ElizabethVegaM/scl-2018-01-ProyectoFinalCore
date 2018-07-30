@@ -9,7 +9,12 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
+.logoBackground{
+  background-color:  rgba(0, 0, 0, 0.726);
+}
+#toRegisterBtn{
+  margin-top: 35vh;
+}
 #register {
   background-color: rgba(0, 0, 0, 0.726);
   color: #fafafa;
@@ -25,6 +30,7 @@ body {
   padding: 0.5em;
   border: none;
   background-color: none;
+  font-size: 30px;
 }
 
 .cameraButton input {
@@ -48,7 +54,8 @@ body {
   display: block;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 750px)
+and (orientation : portrait) {
   body{
   background-image: url(../img/if.jpg);
   background-size: cover;
