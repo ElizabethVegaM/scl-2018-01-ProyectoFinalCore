@@ -1,0 +1,196 @@
+[{
+		"empleado": "Valentina Smith",
+		"contacto": "valentina@laboratoria.cl",
+		"empresa": "Laboratoria"
+	},
+	{
+		"empleado": "Carla Cruz",
+		"contacto": "carla@laboratoria.cl",
+		"empresa": "Laboratoria"
+	},
+	{
+		"empleado": "Rocio Alberdi",
+		"contacto": "rocio@laboratoria.cl",
+		"empresa": "Laboratoria"
+	},
+	{
+		"empleado": "Jose Tomas",
+		"contacto": "jose.tomas@laboratoria.cl",
+		"empresa": "Laboratoria"
+	},
+	{
+		"empleado": "Dominga Matus",
+		"contacto": "domatus@elestudio.cl",
+		"empresa": "Elestudio"
+	},
+	{
+		"empleado": "Federico Gutierrez",
+		"contacto": "fegutierrez@elestudio.cl",
+		"empresa": "Elestudio"
+	},
+	{
+		"empleado": "Tina Sol",
+		"contacto": "tinasol@elestudio.cl",
+		"empresa": "Elestudio"
+	},
+	{
+		"empleado": "Amaya Suarez",
+		"contacto": "asuarez@robotics.cl",
+		"empresa": "Robotics Lab"
+	},
+	{
+		"empleado": "Bruno Diaz",
+		"contacto": "brudiaz@robotics.cl",
+		"empresa": "Robotics Lab"
+	},
+	{
+		"empleado": "Arturito Solo",
+		"contacto": "artusolo@robotics.cl",
+		"empresa": "Robotics Lab"
+	},
+	{
+		"empleado": "Martin Larrain",
+		"contacto": "malarrain@fdm.com",
+		"empresa": "Fábrica de Medios"
+	},
+	{
+		"empleado": "Maria Jesus Donoso",
+		"contacto": "mjdonoso@fdm.com",
+		"empresa": "Fábrica de Medios"
+	},
+	{
+		"empleado": "Trinidad Escobar",
+		"contacto": "triniescobar@fdm.com",
+		"empresa": "Fábrica de Medios"
+	},
+	{
+		"empleado": "Lucius Black",
+		"contacto": "lublack@mustakis.cl",
+		"empresa": "FUNDACIÓN MUSTAKIS"
+	},
+	{
+		"empleado": "Nola Antillan",
+		"contacto": "nolaantillan@mustakis.cl",
+		"empresa": "FUNDACIÓN MUSTAKIS"
+	},
+	{
+		"empleado": "Beatriz Soto",
+		"contacto": "beasoto@mustakis.cl",
+		"empresa": "FUNDACIÓN MUSTAKIS"
+	},
+	{
+		"empleado": "Joel Garcia",
+		"contacto": "joelgarcia@mustakis.cl",
+		"empresa": "FUNDACIÓN MUSTAKIS"
+	},
+	{
+		"empleado": "Phillip Bravo",
+		"contacto": "pbravo@husares.cl",
+		"empresa": "Destilería Húsares"
+	},
+	{
+		"empleado": "Carlos Perez",
+		"contacto": "cperez@husares.cl",
+		"empresa": "Destilería Húsares"
+	},
+	{
+		"empleado": "Amir Celik",
+		"contacto": "amircelik@husares.cl",
+		"empresa": "Destilería Húsares"
+	},
+	{
+		"empleado": "Tadeo Gonzalez",
+		"contacto": "tgonzalez@aguaslab.com",
+		"empresa": "AguasLab"
+	},
+	{
+		"empleado": "Hermione Martinez",
+		"contacto": "hmartinez@aguaslab.com",
+		"empresa": "AguasLab"
+	},
+	{
+		"empleado": "Tatiana Molina",
+		"contacto": "tmolina@aguaslab.com",
+		"empresa": "AguasLab"
+	},
+	{
+		"empleado": "Alejandro Contreras",
+		"contacto": "alecontreras@aguaslab.com",
+		"empresa": "AguasLab"
+	},
+	{
+		"empleado": "Wendy Sulca",
+		"contacto": "wendy@wp.cl",
+		"empresa": "Wild Proyect"
+	},
+	{
+		"empleado": "Diego Bonetta",
+		"contacto": "diego@wp.cl",
+		"empresa": "Wild Proyect"
+	},
+	{
+		"empleado": "Carolina Nash",
+		"contacto": "carolina@wp.cl",
+		"empresa": "Wild Proyect"
+	},
+	{
+		"empleado": "Anahis Jofré",
+		"contacto": "ajofre@deseis.cl",
+		"empresa": "deseis"
+	},
+	{
+		"empleado": "Ricardo Gutiérrez",
+		"contacto": "rguttierrez@deseis.cl",
+		"empresa": "deseis"
+	},
+	{
+		"empleado": "Elizabeth Vega",
+		"contacto": "rav.almasy.ely@gmail.com",
+		"empresa": "deseis"
+	},
+	{
+		"empleado": "Maite Rojas",
+		"contacto": "marojas@cdi.cl",
+		"empresa": "cdi"
+	},
+	{
+		"empleado": "Claudia Suazo",
+		"contacto": "csuazo@cdi.cl",
+		"empresa": "cdi"
+	},
+	{
+		"empleado": "Carolina Delgado",
+		"contacto": "carolinadelgadob@gmail.com",
+		"empresa": "cdi"
+	},
+	{
+		"empleado": "Marta Díaz",
+		"contacto": "mdiaz@tremenda.cl",
+		"empresa": "Tremenda"
+	},
+	{
+		"empleado": "Natividad Alonso",
+		"contacto": "nalonso@tremenda.cl",
+		"empresa": "Tremenda"
+	},
+	{
+		"empleado": "Pedro Piedra",
+		"contacto": "ppiedra@tremenda.cl",
+		"empresa": "Tremenda"
+	},
+	{
+		"empleado": "Luz Sepúlveda",
+		"contacto": "lsepulveda@ilegal.cl",
+		"empresa": "Ilegal"
+	},
+	{
+		"empleado": "Ricardo Gutiérrez",
+		"contacto": "rguttierrez@ilegal.cl",
+		"empresa": "Ilegal"
+	},
+	{
+		"empleado": "Cindy López",
+		"contacto": "cindy.lopezoportus@gmail.com",
+		"empresa": "Ilegal"
+	}
+]
