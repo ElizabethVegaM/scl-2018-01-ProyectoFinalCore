@@ -37,28 +37,42 @@
         <button id="data">Dash</button>
       </div>
   </section>
+  
   <!-- Sección de registro -->
   <section id="register" class="d-none">
     <div class="circle">
       <img id="profilePic" class="profile-pic" src="">
     </div>
     <form id="cameraIcon" action="#" class="row">
-      <label class="cameraButton"><i class="fas fa-camera"></i>
-        <input type="file" accept="image/*;capture=camera">
+      <label class="cameraButton">
+        <i class="fas fa-camera"></i>
+        <input id="photo" type="file" accept="image/*;capture=camera">
       </label>
     </form>
     <form>
-      <div class="form-group">
-        <label for="name">Nombre</label>
-        <input id="visitorName" type="text" class="form-control" placeholder="Ingrese nombre">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Nombre</label>
+          <input id="visitorName" type="text" class="form-control" placeholder="Ingrese nombre">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="rut">RUT</label>
+          <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT">
+        </div>
       </div>
       <div class="form-group">
-        <label for="rut">RUT</label>
-        <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Correo</label>
+        <label for="visitorEmail">Correo</label>
         <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="visitorCompany">Empresa</label>
+          <input id="visitorCompany" type="text" class="form-control" placeholder="Ingrese empresa">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="visitorLicensePlate">Patente vehículo (en caso de usar estacionamiento)</label>
+          <input id="visitorLicensePlate" type="text" class="form-control" placeholder="Ingrese patente">
+        </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
@@ -104,11 +118,19 @@
       <button id="registerUser" type="button" class="btn btn-primary">REGISTRAR</button>
     </form>
   </section>
-<section class="d-none" id="dashboard">
-  <div>
-    <ul id="dashboardList"></ul>
-  </div>
-</section>
+  <section id="succes" class="d-none">
+    <div class="container">
+      <h1>Bienvenido a IF Blanco</h1>
+      <h2> Tu visita a sido registrada con exito</h2>
+    </div>
+  </section>
+  <!-- Dashboard  -->
+  <section class="d-none" id="dashboard">
+
+    <div>
+      <ul id="dashboardList"></ul>
+    </div>
+  </section>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
     // Initialize Firebase

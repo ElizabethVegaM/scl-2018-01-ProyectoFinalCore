@@ -18,19 +18,29 @@ const dataEmployee = () => {
     });
 };
 
-// registrar usuarios
+// Registrar nuevos visitantes
+photo.addEventListener('change', function(event) {
+  let storageRef = firebase.storage().ref().child(`visitorsPhoto/${visitorRut.value}.jpeg`);
+  let firstFile = event.target.files[0]; 
+  storageRef.put(firstFile);
+  storageRef.getDownloadURL().then(function(url) {
+    profilePic.src = url;
+  }).catch(function(error) {
+    console.log('Ha ocurrido un error' + error);
+  });
+});
+
 registerUser.addEventListener('click', () => {
   const newUserKey = firebase.database().ref().child('visitors').push().key;
   firebase.database().ref(`visitors/${newUserKey}`).set({
     name: visitorName.value,
     rut: visitorRut.value,
     email: visitorEmail.value,
-    company: inputCompany.value,
+    company: visitorCompany.value,
+    licensePlate: visitorLicensePlate.value,
+    companyToVisit: inputCompany.value,
     employeeToVisit: inputEmployee.value,
     reason: inputReason.value,
-    photo: 'hay que poner algo mientras',
-    time: Date.now()
-  });    
+    photo: profilePic.src
+  });
 });
-
-
