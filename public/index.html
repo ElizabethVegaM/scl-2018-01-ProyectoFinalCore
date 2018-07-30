@@ -25,6 +25,16 @@
       <img src="assets/img/logo.png" alt="logo if">
       <button id="toRegisterBtn">Registrar entrada</button>
     </div>
+    <div>
+      <div class="container">
+        <h1>Bienvenido</h1>
+        
+        <form class="form">
+          <input type="email" placeholder="Usuario" id="email">
+          <input type="password" placeholder="contraseña" id="password">
+          <button type="submit" id="loginBtn" onclick="login()">Entrar</button>
+        </form>
+      </div>
   </section>
   <!-- Sección de registro -->
   <section id="register" class="d-none">
@@ -93,7 +103,11 @@
       <button id="registerUser" type="button" class="btn btn-primary">REGISTRAR</button>
     </form>
   </section>
-
+<section class="d-none" id="dashboard">
+  <div>
+    <ul id="dashboardList"></ul>
+  </div>
+</section>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
     // Initialize Firebase

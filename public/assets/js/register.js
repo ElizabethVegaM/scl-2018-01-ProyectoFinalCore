@@ -1,5 +1,6 @@
 window.onload = () => {
   dataEmployee();
+  dataVisit()
 };
 
 // Validar rut
@@ -29,11 +30,7 @@ registerUser.addEventListener('click', () => {
     employeeToVisit: inputEmployee.value,
     reason: inputReason.value,
     photo: 'hay que poner algo mientras'
-  });
+  });    
 });
 
-firebase.database().ref('visitors')
-  .limitToLast(10)
-  .on('child_added', (newVisitor) => {
-    console.log(newVisitor);  
-  });
+
