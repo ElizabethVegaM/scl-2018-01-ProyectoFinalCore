@@ -1,19 +1,22 @@
 firebase.database().ref('visitors')
   .limitToLast(100)
   .on('child_added', (newVisitor) => {
-  const time = new Date(newVisitor.val().time);
-    if(newVisitor.val().email === null){
-      newVisitor.val().email = "sin información";
-    }
-    dashboardList.innerHTML += `
-      <h5>${time.getDate()}/${time.getMonth()} ${time.getHours()}:${time.getMinutes()}</h5>
-      <li>${newVisitor.val().photo}</li>
-      <li>${newVisitor.val().name}</li>
-      <li>${newVisitor.val().company}</li>
-      <li>${newVisitor.val().email}</li>
-      <li>${newVisitor.val().employeeToVisit}</li>
-      <li>${newVisitor.val().reason}</li>
-      <li>${newVisitor.val().companyToVisit}</li>
-      <li>${newVisitor.val().licensePlate}</li>  
+    const time = new Date(newVisitor.val().time);
+    bodyDashboard.innerHTML += `
+      <tr>
+        <td>
+          <img class="avatar-pic" id="avatarPic" src="${newVisitor.val().photo}"></img>
+          <p>${newVisitor.val().name}/</p>
+          <p>${newVisitor.val().company.toUpperCase()}</p>
+        </td>
+        <td>
+          <p>${time.getDate()}/${time.getMonth()}</p> 
+          <p>${time.getHours()}:${time.getMinutes()}</p>
+        </td>
+        <td>
+          <p>${newVisitor.val().companyToVisit}</p>
+        </td>
+        <td>${newVisitor.val().reason}</td>
+       </tr>
     `;
   });

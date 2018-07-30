@@ -1,11 +1,7 @@
+/* 
 window.onload = () => {
   dataEmployee();
 };
-
-// Validar rut
-jQuery(document).ready(function($) {
-  $('#visitorRut').rut();
-});
 
 // Traer archivo de empleados
 let employees = {};
@@ -17,7 +13,7 @@ const dataEmployee = () => {
       console.log(employees);
     });
 };
-/*
+
 inputCompany.addEventListener('click', () => {
   inputEmployee.innerHTML = '';
   for (let i = 0; i < employees.length; i++) {
@@ -28,28 +24,35 @@ inputCompany.addEventListener('click', () => {
 });
 */
 
+// Validar rut
+jQuery(document).ready(function($) {
+  $('#visitorRut').rut();
+});
+
 // Registrar nuevos visitantes
+let photoURL;
 photo.addEventListener('change', function(event) {
   let storageRef = firebase.storage().ref().child(`visitorsPhoto/${visitorRut.value}.jpeg`);
   let firstFile = event.target.files[0];
   storageRef.put(firstFile);
   storageRef.getDownloadURL().then(function(url) {
-    profilePic.src = url;
+    photoMessage.innerHTML = '¡Listo!';
+    // profilePic.src = url;
+    photoURL = url;
+    console.log(photoURL);
   }).catch(function(error) {
     console.log('Ha ocurrido un error' + error);
   });
 });
 
-registerUser.addEventListener('submit', () => {
+registerUser.addEventListener('click', () => {
   visitor = visitorName.value;
   rut = visitorRut.value;
   email = visitorEmail.value;
   visitorCompany = visitorCompany.value;
   licensePlate = visitorLicensePlate.value;
   company = inputCompany.value;
-  employee = inputEmployee.value;
   reason = inputReason.value;
-  photo = profilePic.src;
   const newUserKey = firebase.database().ref().child('visitors').push().key;
   firebase.database().ref(`visitors/${newUserKey}`).set({
     name: visitor,
@@ -58,9 +61,9 @@ registerUser.addEventListener('submit', () => {
     company: visitorCompany,
     licensePlate: licensePlate,
     companyToVisit: company,
-    employeeToVisit: employee,
     reason: reason,
-    photo: photo
+    photo: photoURL,
+    time: Date.now()
   });
   welcome.classList.add('d-none');
   succes.classList.remove('d-none');
