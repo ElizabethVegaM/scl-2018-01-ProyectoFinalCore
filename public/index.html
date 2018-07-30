@@ -24,15 +24,20 @@
     <div class="init">
       <img src="assets/img/logo.png" alt="logo if">
       <button id="toRegisterBtn">Registrar entrada</button>
-    </div> 
-    <div class="container">
-      <h1>Bienvenido</h1>
-      <form class="form">
-        <input type="email" placeholder="Usuario" id="email">
-        <input type="password" placeholder="contraseña" id="password">
-        <button type="button" id="loginBtn">Entrar</button>
-      </form>
+
     </div>
+    <div>
+      <div class="container">
+        <h1>Bienvenido</h1>
+        
+        <form class="form">
+          <input type="email" placeholder="Usuario" id="email">
+          <input type="password" placeholder="contraseña" id="password">
+          <button type="button" id="loginBtn" onclick="login()">Entrar</button>
+        </form>
+        <button id="data">Dash</button>
+      </div>
+
   </section>
 
   <!-- Sección de registro -->
@@ -109,8 +114,17 @@
       <button id="registerUser" type="submit" class="btn btn-primary">REGISTRAR</button>
     </form>
   </section>
-  <!-- Dashboard -->
+
+  <section id="succes" class="d-none">
+    <div class="container">
+      <h1>Bienvenido a IF Blanco</h1>
+      <h2> Tu visita a sido registrada con exito</h2>
+    </div>
+  </section>
+    
+  <!-- Dashboard  -->
   <section class="d-none" id="dashboard">
+
     <div>
       <ul id="dashboardList"></ul>
     </div>

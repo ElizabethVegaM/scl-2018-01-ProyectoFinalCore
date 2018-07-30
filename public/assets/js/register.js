@@ -68,3 +68,4 @@ firebase.database().ref('visitors')
   .on('child_added', (newVisitor) => {
     console.log(newVisitor.val());
   });
+

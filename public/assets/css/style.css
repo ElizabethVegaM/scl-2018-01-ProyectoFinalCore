@@ -79,12 +79,12 @@ h1{
   background-color: rgb(245, 247, 249);
 }
 
-#welcome, #register, #dashboard {
+#welcome, #register, #succes{
   width: 100vw;
   height: 100vh;
 }
 
-#register, #dashboard {
+#register, #succes{
   background-color: rgba(0, 0, 0, 0.726);
   color: #fafafa;
   width: 80vw;
@@ -121,6 +121,10 @@ h1{
   max-height: 200px;
   margin-left: -100px;
   margin-right: -100px;
+}
+
+#dashboard{
+  background-color: gainsboro;
 }
 
 @media screen and (min-width: 750px) {
