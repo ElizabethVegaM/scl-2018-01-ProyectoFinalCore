@@ -29,7 +29,7 @@
     <div>
       <div class="container">
         <h1>Bienvenido</h1>
-        
+
         <form class="form">
           <input type="email" placeholder="Usuario" id="email">
           <input type="password" placeholder="contraseña" id="password">
@@ -42,80 +42,77 @@
 
   <!-- Sección de registro -->
   <section id="register" class="d-none">
+    <div class="container-fluid">
+      <!-- 
     <div class="circle">
       <img id="profilePic" class="profile-pic" src="">
     </div>
-    <form id="cameraIcon" action="#" class="row">
-      <label class="cameraButton">
-        <i class="fas fa-camera"></i>
-        <input id="photo" type="file" accept="image/*;capture=camera" required>
-      </label>
-    </form>
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="name">Nombre</label>
-          <input id="visitorName" type="text" class="form-control" placeholder="Ingrese nombre" required>
+     -->
+      <form class="registerForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="visitorName">Nombre</label>
+            <input id="visitorName" type="text" class="form-control" placeholder="NOMBRE" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="visitorRut">RUT</label>
+            <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT" required>
+          </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="rut">RUT</label>
-          <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT" required>
+        <div class="form-group">
+          <label for="visitorEmail">Correo</label>
+          <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo" required>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="visitorEmail">Correo</label>
-        <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo" required>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="visitorCompany">Empresa</label>
-          <input id="visitorCompany" type="text" class="form-control" placeholder="Ingrese empresa">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="visitorCompany">Empresa</label>
+            <input id="visitorCompany" type="text" class="form-control" placeholder="Ingrese empresa">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="visitorLicensePlate">Patente vehículo</label>
+            <input id="visitorLicensePlate" type="text" class="form-control" placeholder="Ingrese patente">
+          </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="visitorLicensePlate">Patente vehículo (en caso de usar estacionamiento)</label>
-          <input id="visitorLicensePlate" type="text" class="form-control" placeholder="Ingrese patente">
+        <div class="form-row">
+          <div id="companyContainer" class="form-group col-md-6">
+            <label for="inputCompany">Empresa a visitar</label>
+            <select id="inputCompany" class="form-control" required>
+              <option>Elestudio</option>
+              <option>Robotics Lab</option>
+              <option>Fábrica de Medios</option>
+              <option>Café Altura</option>
+              <option>Laboratoria</option>
+              <option>Fundación Mustakis</option>
+              <option>Destilería Húsares</option>
+              <option>Aguas Lab</option>
+              <option>Wild Project Chile</option>
+              <option>Deseis</option>
+              <option>cdi</option>
+              <option>Tremenda</option>
+              <option>Ilegal</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputReason">Motivo de la visita</label>
+            <select id="inputReason" class="form-control" required>
+              <option>Entrevista</option>
+              <option>Reunión</option>
+              <option>Social</option>
+              <option>Proveedor</option>
+              <option>Otro</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div id="companyContainer" class="form-group col-md-6">
-          <label for="inputCompany">Empresa a visitar</label>
-          <select id="inputCompany" class="form-control" size="3" required>
-            <option>Elestudio</option>
-            <option>Robotics Lab</option>
-            <option>Fábrica de Medios</option>
-            <option>Café Altura</option>
-            <option>Laboratoria</option>
-            <option>Fundación Mustakis</option>
-            <option>Destilería Húsares</option>
-            <option>Aguas Lab</option>
-            <option>Wild Project Chile</option>
-            <option>Deseis</option>
-            <option>cdi</option>
-            <option>Tremenda</option>
-            <option>Ilegal</option>
-          </select>
+        <div id="cameraIcon" action="#" class="form-group">
+          <label for="photo" class="cameraButton">AÑADIR FOTO
+            <i class="fas fa-camera"></i>
+            <input id="photo" type="file" accept="capture=camera">
+            <p id="photoMessage"></p>
+          </label>
         </div>
-        <div class="form-group col-md-6">
-          <label for="inputEmployee">Representante</label>
-          <select id="inputEmployee" class="form-control" size="3" required>
-            <option>Carolina Delgado</option>
-            <option>Cindy López</option>
-            <option>Elizabeth Vega</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputReason">Motivo de la visita</label>
-        <select id="inputReason" class="form-control" required>
-          <option>Entrevista</option>
-          <option>Reunión</option>
-          <option>Social</option>
-          <option>Proveedor</option>
-          <option>Otro</option>
-        </select>
-      </div>
-      <button id="registerUser" type="submit" class="btn btn-primary">REGISTRAR</button>
-    </form>
+        <button id="registerUser" type="button" class="btn btn-primary">REGISTRAR</button>
+      </form>
+    </div>
   </section>
 
   <section id="succes" class="d-none">
@@ -124,7 +121,7 @@
       <h2> Tu visita a sido registrada con exito</h2>
     </div>
   </section>
-    
+
   <!-- Dashboard  -->
   <section class="d-none" id="dashboard">
 

@@ -1,9 +1,9 @@
 firebase.database().ref('visitors')
   .limitToLast(100)
   .on('child_added', (newVisitor) => {
-  const time = new Date(newVisitor.val().time);
-    if(newVisitor.val().email === null){
-      newVisitor.val().email = "sin información";
+    const time = new Date(newVisitor.val().time);
+    if (newVisitor.val().email === null) {
+      newVisitor.val().email = 'sin información';
     }
     dashboardList.innerHTML += `
       <h5>${time.getDate()}/${time.getMonth()} ${time.getHours()}:${time.getMinutes()}</h5>
