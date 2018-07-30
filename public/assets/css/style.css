@@ -44,7 +44,6 @@ h1{
 #email, 
 #password{
 	display: block;
-	appearance: none;
 	outline: 0;
 	border: 1px solid white, 40%;
 	background-color: white, 20%;
@@ -66,7 +65,6 @@ h1{
   }
 
 #loginBtn{
-	appearance: none;
 	outline: 0;
 	background-color: white;
 	border: 0;
@@ -75,19 +73,18 @@ h1{
 	width: 250px;
 	cursor: pointer;
 	font-size: 18px;
-	transition-duration: 0.25s;
 }
 
 #loginBtn:hover{
   background-color: rgb(245, 247, 249);
 }
 
-#welcome, #register {
+#welcome, #register, #dashboard {
   width: 100vw;
   height: 100vh;
 }
 
-#register {
+#register, #dashboard {
   background-color: rgba(0, 0, 0, 0.726);
   color: #fafafa;
   width: 80vw;

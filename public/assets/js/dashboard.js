@@ -1,8 +1,9 @@
 firebase.database().ref('visitors')
   .limitToLast(100)
   .on('child_added', (newVisitor) => {
+  const time = new Date(newVisitor.val().time);
   dashboardList.innerHTML += `
-  <h5>${newVisitor.val().time.getDate()}/${newVisitor.val().time.getMonth()}${newVisitor.val().time.getHours()}:${newVisitor.val().time.getMinutes()}</h5>
+  <h5>${time.getDate()}/${time.getMonth()} ${time.getHours()}:${time.getMinutes()}</h5>
   <li>${newVisitor.val().photo}</li>
   <li>${newVisitor.val().name}</li>
   <li>${newVisitor.val().company}</li>
