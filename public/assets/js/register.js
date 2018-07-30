@@ -64,7 +64,6 @@ registerUser.addEventListener('click', () => {
     reason: reason,
     photo: photoURL
   });
-  
   /*
   welcome.classList.add('d-none');
   succes.classList.remove('d-none');

@@ -24,7 +24,6 @@
     <div class="init">
       <img src="assets/img/logo.png" alt="logo if">
       <button id="toRegisterBtn">Registrar entrada</button>
-
     </div>
     <div>
       <div class="container">
@@ -33,11 +32,10 @@
         <form class="form">
           <input type="email" placeholder="Usuario" id="email">
           <input type="password" placeholder="contraseña" id="password">
-          <button type="button" id="loginBtn" onclick="login()">Entrar</button>
+          <button type="button" id="loginBtn" onclick="login()" class="">Entrar</button>
         </form>
         <button id="data">Dash</button>
       </div>
-
   </section>
 
   <!-- Sección de registro -->
@@ -114,7 +112,6 @@
       </form>
     </div>
   </section>
-
   <section id="succes" class="d-none">
     <div class="container">
       <h1>Bienvenido a IF Blanco</h1>
@@ -123,11 +120,40 @@
   </section>
 
   <!-- Dashboard  -->
-  <section class="d-none" id="dashboard">
+  <section class="d-none container-fluid" id="dashboard">
+    <header class="dashHeader">
+      <img src="assets/img/logo.png" alt="logoIf">
+    </header>
+    <div class="row">
+    <aside id="sidebar">
+        <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Registro de Visitantes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Analitycs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Administrar Residentes</a>
+            </li>
+          </ul>
+        </aside>    
+        <div class="col-md-6"></div>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                
+              <div>
+                    <ul id="dashboardList"></ul>
+                </div>
 
-    <div>
-      <ul id="dashboardList"></ul>
-    </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+          </div>
+          </div>
+  
   </section>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
