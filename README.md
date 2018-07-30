@@ -16,18 +16,10 @@ Esta aplicación tiene como por objetivo simpliﬁcar y modernizar el proceso de
 Usuarios: Administradores de empresa, recepcionistas y visitas.
 * Para diseñar el prototipo del producto en baja fidelidad se utilizo el programa Balsamiq. (Documento en PNG en Carpeta UX, en Sketch Baja Fidelidad).
 ![](https://imageshack.com/a/img922/8096/PgAcoq.png)
-![](https://imageshack.com/a/img924/572/jvFMGw.png)
-![](https://imageshack.com/a/img924/9619/JP7CbQ.png)
-![](https://imageshack.com/a/img924/7268/ZP4ZQA.png)
-![](https://imageshack.com/a/img921/1432/WTi2MV.png)
-![](https://imageshack.com/a/img923/1103/Jn2tWR.png)
+
 
 * Para diseñar el prototio del producto en alta fidelidad se utilizo el programa Atomic. (Documento en PNG en Carpeta UX, en Sketch Alta Fidelidad).
 
-![](https://imageshack.com/a/img921/7479/wqhGVw.png)
-![](https://imageshack.com/a/img921/8577/n44lVT.png)
-![](https://imageshack.com/a/img922/5247/xU04hK.png)
-![](https://imageshack.com/a/img924/4167/bSmEYN.png)
 ![](https://imageshack.com/a/img922/10/CI7bPW.jpg)
 ![](https://imageshack.com/a/img921/491/CrMHSQ.jpg)
 ![](https://imageshack.com/a/img923/3049/DVvu6F.jpg)
