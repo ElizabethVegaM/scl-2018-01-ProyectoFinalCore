@@ -93,6 +93,11 @@ h1{
   margin-left: 10vw;
 }
 
+/* Formulario de registro */
+.registerForm {
+  text-align: initial;
+}
+
 .cameraButton {
   display: inline-block;
   margin: auto;
