@@ -20,9 +20,9 @@ Usuarios: Administradores de empresa, recepcionistas y visitas.
 
 * Para diseñar el prototio del producto en alta fidelidad se utilizo el programa Atomic. (Documento en PNG en Carpeta UX, en Sketch Alta Fidelidad).
 
-![](https://imageshack.com/a/img922/10/CI7bPW.jpg)
 ![](https://imageshack.com/a/img921/491/CrMHSQ.jpg)
 ![](https://imageshack.com/a/img923/3049/DVvu6F.jpg)
+![](https://imageshack.com/a/img922/10/CI7bPW.jpg)
 ## Planificación inicial
 Para la planificación inicial de nuestro trabajo se utilizo Trello. (Planificación: https://trello.com/b/emdbTWvW/registro-de-visitantes).
 
