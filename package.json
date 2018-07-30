@@ -1,7 +1,7 @@
 {
-  "name": "Social Network",
+  "name": "Registro de Visitantes",
   "version": "1.0.0",
-  "main": "src/index.html",
+  "main": "public/index.html",
   "license": "MIT",
   "scripts": {
     "htmlhint": "htmlhint src/*.html test/*.html",
@@ -12,6 +12,7 @@
     "test": "npm run test-node && npm run test-browser"
   },
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "htmlhint": "^0.9.13",

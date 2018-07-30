@@ -14,6 +14,9 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-table.css">
   <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -28,76 +31,150 @@
       <div class="col align-self-center">
        <button id="toRegisterBtn" class="btn btn-primary">Registrar entrada</button>
       </div>
+    </div>
+    <div>
+      <div class="container">
+        <h1>Bienvenido</h1>
+        <form class="form">
+          <input type="email" placeholder="Usuario" id="email">
+          <input type="password" placeholder="contraseña" id="password">
+          <button type="button" id="loginBtn" onclick="login()" class="">Entrar</button>
+        </form>
+        <button id="data">Dash</button>
       </div>
   </section>
+
   <!-- Sección de registro -->
   <section id="register" class="d-none">
+    <div class="container-fluid">
+      <!-- 
     <div class="circle">
       <img id="profilePic" class="profile-pic" src="">
     </div>
-    <form id="cameraIcon" action="#" class="row">
-      <label class="cameraButton"><i class="fas fa-camera"></i>
-        <input type="file" accept="image/*;capture=camera">
-      </label>
-    </form>
-    <form>
-      <div class="form-group">
-        <label for="name">Nombre</label>
-        <input id="visitorName" type="text" class="form-control" placeholder="Ingrese nombre">
-      </div>
-      <div class="form-group">
-        <label for="rut">RUT</label>
-        <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Correo</label>
-        <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo">
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCompany">Empresa a visitar</label>
-          <select id="inputCompany" class="form-control">
-            <option selected>Seleccionar</option>
-            <option>Elestudio</option>
-            <option>Robotics Lab</option>
-            <option>Fábrica de Medios</option>
-            <option>Café Altura</option>
-            <option>Laboratoria</option>
-            <option>Fundación Mustakis</option>
-            <option>Destilería Húsares</option>
-            <option>Aguas Lab</option>
-            <option>Wild Projec Chile</option>
-            <option>Deseis</option>
-            <option>cdi</option>
-            <option>Tremenda</option>
-            <option>Ilegal</option>
-          </select>
+     -->
+      <form class="registerForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="visitorName">Nombre</label>
+            <input id="visitorName" type="text" class="form-control" placeholder="NOMBRE" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="visitorRut">RUT</label>
+            <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT" required>
+          </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="inputEmployee">Representante</label>
-          <select id="inputEmployee" class="form-control">
-            <option selected>Seleccionar</option>
-            <option>Carolina Delgado (carolinadelgadob@gmail.com)</option>
-            <option>Cindy López (cindy.lopezoportus@gmail.com)</option>
-            <option>Elizabeth Vega (eb.vega.m@gmail.com)</option>
-          </select>
+        <div class="form-group">
+          <label for="visitorEmail">Correo</label>
+          <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo" required>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="inputReason">Motivo de la visita</label>
-        <select id="inputReason" class="form-control">
-          <option selected>Seleccionar</option>
-          <option>Entrevista</option>
-          <option>Reunión</option>
-          <option>Social</option>
-          <option>Proveedor</option>
-          <option>Otro</option>
-        </select>
-      </div>
-      <button id="registerUser" type="button" class="btn btn-primary">REGISTRAR</button>
-    </form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="visitorCompany">Empresa</label>
+            <input id="visitorCompany" type="text" class="form-control" placeholder="Ingrese empresa">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="visitorLicensePlate">Patente vehículo</label>
+            <input id="visitorLicensePlate" type="text" class="form-control" placeholder="Ingrese patente">
+          </div>
+        </div>
+        <div class="form-row">
+          <div id="companyContainer" class="form-group col-md-6">
+            <label for="inputCompany">Empresa a visitar</label>
+            <select id="inputCompany" class="form-control" required>
+              <option>Elestudio</option>
+              <option>Robotics Lab</option>
+              <option>Fábrica de Medios</option>
+              <option>Café Altura</option>
+              <option>Laboratoria</option>
+              <option>Fundación Mustakis</option>
+              <option>Destilería Húsares</option>
+              <option>Aguas Lab</option>
+              <option>Wild Project Chile</option>
+              <option>Deseis</option>
+              <option>cdi</option>
+              <option>Tremenda</option>
+              <option>Ilegal</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputReason">Motivo de la visita</label>
+            <select id="inputReason" class="form-control" required>
+              <option>Entrevista</option>
+              <option>Reunión</option>
+              <option>Social</option>
+              <option>Proveedor</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <div id="cameraIcon" action="#" class="form-group">
+          <label for="photo" class="cameraButton">AÑADIR FOTO
+            <i class="fas fa-camera"></i>
+            <input id="photo" type="file" accept="capture=camera">
+            <p id="photoMessage"></p>
+          </label>
+        </div>
+        <button id="registerUser" type="button" class="btn btn-primary">REGISTRAR</button>
+      </form>
+    </div>
+  </section>
+  <section id="succes" class="d-none">
+    <div class="container">
+      <h1>Bienvenido a IF Blanco</h1>
+      <h2> Tu visita a sido registrada con exito</h2>
+    </div>
   </section>
 
+  <!-- Dashboard  -->
+  <section class="d-none container-fluid" id="dashboard">
+    <header class="dashHeader">
+      <img src="assets/img/logo.png" alt="logoIf">
+    </header>
+    <aside id="sidebar">
+      <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Registro de Visitantes</a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Analitycs</a>
+        </li>
+        <hr>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Administrar Residentes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="close-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="close" aria-selected="false"> <i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
+        </li>
+      </ul>
+    </aside>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div>
+          <div id="dashboardList">
+            <table class="table table-bordered table-responsive-sm" id="table" data-toggle="table" data-search="true" data-filter-control="true"
+              data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+              <thead>
+                <tr>
+                  <th data-field="prenom" data-filter-control="input" data-sortable="true" scope="col" id="visit">Visitante</th>
+                  <th data-field="date" data-filter-control="select" data-sortable="true" scope="col">Ingreso</th>
+                  <th data-field="examen" data-filter-control="select" data-sortable="true" scope="col">Anfitrión</th>
+                  <th data-field="examen" data-filter-control="select" data-sortable="true" scope="col">Motivo</th>
+                </tr>
+              </thead>
+              <tbody id="bodyDashboard">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
+  </section>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -111,6 +188,11 @@
     };
     firebase.initializeApp(config);
   </script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+
+  <!-- Latest compiled and minified Locales -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -121,6 +203,7 @@
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/register.js"></script>
   <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/mail.js"></script>
   <script src="assets/js/jquery.rut.chileno.min.js"></script>
 </body>
 
