@@ -7,6 +7,12 @@ body {
 /*botones de entrada*/
 .btn-block{
   height: 4em;
+  background-color: gray;
+  border: none;
+}
+
+.btn-block:hover{
+  background-color: #F3BF05;
 }
 /* login */
 .wrapper{
@@ -310,4 +316,8 @@ td p {
   .btn-block{
     font-size: 25px;
   }
- }
+  #register{
+    height: 95vh;
+  }
+
+}
