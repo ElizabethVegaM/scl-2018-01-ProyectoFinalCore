@@ -18,6 +18,7 @@
     crossorigin="anonymous">
   <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -53,14 +54,14 @@
       <img id="profilePic" class="profile-pic" src="">
     </div>
      -->
-      <form class="registerForm">
-        <div class="logoRegister">
-          <img src="assets/img/logo.png" alt="logo if">
-        </div>
+      <div class="logoRegister">
+        <img src="assets/img/logo.png" alt="logo if">
+      </div>
+      <form id="registerVisitor" class="registerForm">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="visitorName">Nombre</label>
-            <input id="visitorName" type="text" class="form-control" placeholder="NOMBRE" required>
+            <input id="visitorName" type="text" name="user_name" class="form-control" placeholder="NOMBRE" required>
           </div>
           <div class="form-group col-md-6">
             <label for="visitorRut">RUT</label>
@@ -69,7 +70,7 @@
         </div>
         <div class="form-group">
           <label for="visitorEmail">Correo</label>
-          <input id="visitorEmail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese correo" required>
+          <input id="visitorEmail" type="email" name="user_email" class="form-control" placeholder="Ingrese correo" required>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -111,21 +112,14 @@
             </select>
           </div>
         </div>
-        <div class="row align-items-center">
-          <div class="col"></div>
-          <div class="col">
-            <div id="cameraIcon" action="#" class="form-group">
-              <label for="photo" class="cameraButton">
-                <i class="fas fa-camera"></i>
-                <h6>Tomar Foto</h6>
-                <input id="photo" type="file" accept="capture=camera">
-                <p id="photoMessage"></p>
-              </label>
-            </div>
-            <button id="registerUser" type="submit" class="btn btn-primary">REGISTRAR</button>
-          </div>
-          <div class="col"></div>
+        <div id="cameraIcon" class="form-group">
+          <label for="photo" class="cameraButton">
+            <i class="fas fa-camera"></i>
+            <input id="photo" accept="image/*" type="file" capture="camera">
+            <p id="photoMessage"></p>
+          </label>
         </div>
+        <button type="submit" class="btn">ENVIAR</button>
       </form>
     </div>
   </section>
@@ -169,7 +163,7 @@
             <table class="table table-bordered table-responsive-sm">
               <thead>
                 <tr>
-                  <th  scope="col" id="visit">Visitante</th>
+                  <th scope="col" id="visit">Visitante</th>
                   <th scope="col">Ingreso</th>
                   <th scope="col">Anfitrión</th>
                   <th scope="col">Motivo</th>
@@ -216,15 +210,11 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-  google.charts.load('current', {packages: ['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-  </script>  
   <script src="assets/js/events.js"></script>
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/register.js"></script>
   <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/mail.js"></script>
   <script src="assets/js/jquery.rut.chileno.min.js"></script>
 </body>
 
