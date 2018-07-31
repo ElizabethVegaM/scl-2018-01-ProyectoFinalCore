@@ -26,12 +26,13 @@
     <div class="init">
       <div class="logoBackground">
         <img src="assets/img/logo.png" alt="logo if">
-        <button id="loginAdmin">
-          <i class="fas fa-sign-in-alt"></i>
-          ADMIN</button>
       </div>
       <div class="col align-self-center">
-        <button id="toRegisterBtn" class="btn btn-primary">Registrar entrada</button>
+        <button id="toRegisterBtn" class="btn btn-primary btn-block">Registrar entrada</button>
+        <!-- Boton de Admin -->
+        <button id="loginAdmin" class="btn btn-primary btn-block">
+          <i class="fas fa-sign-in-alt"></i>
+          ADMIN</button>
       </div>
     </div>
     <div class="container d-none" id="logSection">
@@ -111,28 +112,21 @@
             </select>
           </div>
         </div>
-        <div class="row align-items-center">
-          <div class="col"></div>
-          <div class="col">
-            <div id="cameraIcon" action="#" class="form-group">
-              <label for="photo" class="cameraButton">
-                <i class="fas fa-camera"></i>
-                <h6>Tomar Foto</h6>
-                <input id="photo" type="file" accept="capture=camera">
-                <p id="photoMessage"></p>
-              </label>
-            </div>
-            <button id="registerUser" type="submit" class="btn btn-primary">REGISTRAR</button>
-          </div>
-          <div class="col"></div>
+<div id="cameraIcon" class="form-group">
+          <label for="photo" class="cameraButton">
+            <i class="fas fa-camera"></i>
+            <input id="photo" accept="image/*" type="file" capture="camera">
+            <p id="photoMessage"></p>
+          </label>
         </div>
+        <button type="submit" class="btn">ENVIAR</button>
       </form>
     </div>
   </section>
   <section id="succes" class="d-none">
     <div class="container">
       <h1>Bienvenido a IF Blanco</h1>
-      <h2> Tu visita a sido registrada con exito</h2>
+      <h2> Tu visita a sido registrada con éxito</h2>
     </div>
   </section>
 
