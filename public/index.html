@@ -35,15 +35,15 @@
           ADMIN</button>
       </div>
     </div>
-      <div class="container d-none" id="logSection">
-       <i class="fas fa-times" id="closeLogin"></i>
-        <h1 class="welcomeText">Bienvenido</h1>
-        <form class="form">
-          <input type="email" placeholder="Usuario" id="email">
-          <input type="password" placeholder="Contraseña" id="password">
-          <button type="button" id="loginBtn" onclick="login()">Entrar</button>
-        </form>
-      </div>
+    <div class="container d-none" id="logSection">
+      <i class="fas fa-times" id="closeLogin"></i>
+      <h1 class="welcomeText">Bienvenido</h1>
+      <form class="form">
+        <input type="email" placeholder="Usuario" id="email">
+        <input type="password" placeholder="Contraseña" id="password">
+        <button type="button" id="loginBtn" onclick="login()">Entrar</button>
+      </form>
+    </div>
   </section>
 
   <!-- Sección de registro -->
@@ -55,9 +55,9 @@
     </div>
      -->
       <form class="registerForm">
-       <div class="logoRegister">
-         <img src="assets/img/logo.png" alt="logo if">
-       </div>
+        <div class="logoRegister">
+          <img src="assets/img/logo.png" alt="logo if">
+        </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="visitorName">Nombre</label>
@@ -104,7 +104,7 @@
           <div class="form-group col-md-6">
             <label for="inputReason">Motivo de la visita</label>
             <select id="inputReason" class="form-control" required>
-              <option >Entrevista</option>
+              <option>Entrevista</option>
               <option>Reunión</option>
               <option>Social</option>
               <option>Proveedor</option>
@@ -112,35 +112,21 @@
             </select>
           </div>
         </div>
-
-        <div class="row iconButton align-items-center">
-            <div class="col"></div>
-            <div class="col">
-                <div id="cameraIcon" action="#" class="form-group">
-                    <label for="photo" class="cameraButton">
-                      <i class="fas fa-camera"></i>
-                      <h5>Tomar Foto</h5>
-                      <input id="photo" type="file" accept="capture=camera">
-                      <p id="photoMessage"></p>
-                    </label>
-                  </div>
-                  <button id="registerUser" type="submit" class="btn btn-primary btn-block">REGISTRAR</button>
-            </div>
-            <div class="col"></div>
-          </div>
-
-
-         
-        
-         
-        
+<div id="cameraIcon" class="form-group">
+          <label for="photo" class="cameraButton">
+            <i class="fas fa-camera"></i>
+            <input id="photo" accept="image/*" type="file" capture="camera">
+            <p id="photoMessage"></p>
+          </label>
+        </div>
+        <button type="submit" class="btn">ENVIAR</button>
       </form>
     </div>
   </section>
   <section id="succes" class="d-none">
     <div class="container">
       <h1>Bienvenido a IF Blanco</h1>
-      <h2> Tu visita a sido registrada con exito</h2>
+      <h2> Tu visita a sido registrada con éxito</h2>
     </div>
   </section>
 
@@ -174,14 +160,13 @@
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div>
           <div id="dashboardList">
-            <table class="table table-bordered table-responsive-sm" id="table" data-toggle="table" data-search="true" data-filter-control="true"
-              data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+            <table class="table table-bordered table-responsive-sm">
               <thead>
                 <tr>
-                  <th data-field="prenom" data-filter-control="input" data-sortable="true" scope="col" id="visit">Visitante</th>
-                  <th data-field="date" data-sort-order="asc" data-filter-control="select" data-sortable="true" scope="col">Ingreso</th>
-                  <th data-field="examen" data-filter-control="select" data-sortable="true" scope="col">Anfitrión</th>
-                  <th data-field="examen" data-filter-control="select" data-sortable="true" scope="col">Motivo</th>
+                  <th  scope="col" id="visit">Visitante</th>
+                  <th scope="col">Ingreso</th>
+                  <th scope="col">Anfitrión</th>
+                  <th scope="col">Motivo</th>
                 </tr>
               </thead>
               <tbody id="bodyDashboard">
@@ -193,7 +178,17 @@
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
       </div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="adminUsers">
+          <div class="residentes">
+            <h5>Agrega o Elimina residentes del espacio IF</h5>
+          </div>
+          <input type="text" class="form-control" placeholder="Empresa" id="newComapny">
+          <input type="email" class="form-control" placeholder="Correo Corporativo" id="newEmail">
+          <button id="addResident">Agregar</button>
+          <button id="removeResidents">Eliminar</button>
+        </div>
+      </div>
     </div>
   </section>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
@@ -215,11 +210,15 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  </script>  
   <script src="assets/js/events.js"></script>
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/register.js"></script>
   <script src="assets/js/dashboard.js"></script>
-  <script src="assets/js/mail.js"></script>
   <script src="assets/js/jquery.rut.chileno.min.js"></script>
 </body>
 

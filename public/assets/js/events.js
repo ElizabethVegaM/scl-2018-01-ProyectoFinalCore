@@ -14,3 +14,4 @@ closeLogin.addEventListener('click', () => {
   logSection.classList.add('d-none');
   toRegisterBtn.classList.remove('d-none');
 });
+

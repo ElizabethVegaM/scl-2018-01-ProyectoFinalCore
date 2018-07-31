@@ -21,3 +21,29 @@ firebase.database().ref('visitors')
        </tr>
     `;
   });
+
+function addResident () {
+
+};
+
+function removeResident () {
+
+};
+
+function drawChart() {
+  var dataTable = new google.visualization.DataTable();
+  dataTable.addColumn({ type: 'date', id: 'Date' });
+  dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
+  dataTable.addRows([
+    [time.getDate(), newVisitor.val().name]
+   ]);
+
+  var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+
+  var options = {
+    title: "Red Sox Attendance",
+    height: 350,
+  };
+
+  chart.draw(dataTable, options);
+}
