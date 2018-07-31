@@ -151,14 +151,13 @@
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <div>
           <div id="dashboardList">
-            <table class="table table-bordered table-responsive-sm" id="table" data-toggle="table" data-search="true" data-filter-control="true"
-              data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+            <table class="table table-bordered table-responsive-sm">
               <thead>
                 <tr>
-                  <th data-field="prenom" data-filter-control="input" data-sortable="true" scope="col" id="visit">Visitante</th>
-                  <th data-field="date" data-sort-order="asc" data-filter-control="select" data-sortable="true" scope="col">Ingreso</th>
-                  <th data-field="examen" data-filter-control="select" data-sortable="true" scope="col">Anfitrión</th>
-                  <th data-field="examen" data-filter-control="select" data-sortable="true" scope="col">Motivo</th>
+                  <th  scope="col" id="visit">Visitante</th>
+                  <th scope="col">Ingreso</th>
+                  <th scope="col">Anfitrión</th>
+                  <th scope="col">Motivo</th>
                 </tr>
               </thead>
               <tbody id="bodyDashboard">
@@ -170,7 +169,17 @@
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
       </div>
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="adminUsers">
+          <div class="residentes">
+            <h5>Agrega o Elimina residentes del espacio IF</h5>
+          </div>
+          <input type="text" class="form-control" placeholder="Empresa">
+          <input type="email" class="form-control" placeholder="Correo Corporativo">
+          <button>Agregar</button>
+          <button>Eliminar</button>
+        </div>
+      </div>
     </div>
   </section>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
