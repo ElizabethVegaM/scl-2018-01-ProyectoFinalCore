@@ -1,5 +1,4 @@
-let newResident = "";
-
+// Tabla Dashboard
 firebase.database().ref('visitors')
   .limitToLast(100)
   .on('child_added', (newVisitor) => {
@@ -24,8 +23,9 @@ firebase.database().ref('visitors')
     `;
   });
 
+// Agregar coleccion residentes
 addResident.addEventListener('click', () => {
-  const newResident = firebase.database().ref().child('residents').push().key;
+  let newResident = firebase.database().ref().child('residents').push().key;
   firebase.database().ref(`residents/${newResident}`).set({
     company: newComapny.value,
     emailCompany: newEmail.value,
@@ -36,17 +36,13 @@ firebase.database().ref('residents')
 .on('child_added', (newResident) => { 
   newComapny.value = '';
   newEmail.value = '';
-  residentSuccess.innerHTML =`
-  <h6>Registro Exitoso</h6>
-  <p>Nuevo Residente: ${newResident.val().company}</p>
-  <p>Correo Registrado: ${newResident.val().emailCompany}</p>
+  residentSuccess.innerHTML +=`
+  <p class="new">Residente: <span>${newResident.val().company}</span></p>
+  <p class="new">Correo Corporativo: <span>${newResident.val().emailCompany}</span></p>
+  <hr>
   ` 
 });        
 
-
-function removeResident () {
-
-};
 
 // function drawChart() {
 //   var dataTable = new google.visualization.DataTable();
