@@ -254,6 +254,36 @@ td{
 td p {
   margin: 1%;
 }
+
+.adminUsers{
+  height: 74vh;
+  text-align: center;
+  margin: 10%;
+  padding: 5%;
+}
+
+.adminUsers input{
+  display: block;
+  width: 100%;
+  padding: 3%;
+  margin-bottom: 2%;
+}
+.adminUsers button{
+  width: 40%;
+  margin: 3%;
+  background-color: rgba(0, 0, 0, 0.726);
+  color: #fafafa;
+  padding: 1%;
+  font-size: 22px;
+}
+
+.residentes{
+  margin-bottom: 5%;
+  padding: 3%;
+  background-color: rgba(0, 0, 0, 0.66);
+  color: #fafafa
+}
+
 @media screen and (min-width: 320px) {
   body{
     background-image: url(../img/if.jpg);
