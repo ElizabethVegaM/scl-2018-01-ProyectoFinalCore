@@ -1,11 +1,11 @@
-const sgMail = require('../../../node_modules/@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-const msg = {
-  to: 'rav.almasy.ely@gmail.com',
-  from: 'test@example.com',
-  subject: 'Sending with SendGrid is Fun',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+(function() {
+  emailjs.init('user_ef1rlb3A7ij2cRlx3N1MY');
+})();
+
+window.onload = function() {
+  document.getElementById('registerVisitor').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('contact_service', 'contact_form', this);
+    console.log('Correo enviado');
+  });
 };
-sgMail.send(msg);
-console.log('yay');

@@ -45,7 +45,8 @@ photo.addEventListener('change', function(event) {
   });
 });
 
-registerUser.addEventListener('submit', () => {
+registerVisitor.addEventListener('submit', (event) => {
+  event.preventDefault();
   visitor = visitorName.value;
   rut = visitorRut.value;
   email = visitorEmail.value;
@@ -53,6 +54,7 @@ registerUser.addEventListener('submit', () => {
   licensePlate = visitorLicensePlate.value;
   company = inputCompany.value;
   reason = inputReason.value;
+  console.log(`${visitor}, ${rut},${email},${visitorCompany},${licensePlate},${company},${reason}`);
   const newUserKey = firebase.database().ref().child('visitors').push().key;
   firebase.database().ref(`visitors/${newUserKey}`).set({
     name: visitor,
@@ -69,4 +71,5 @@ registerUser.addEventListener('submit', () => {
   succes.classList.remove('d-none');
   register.classList.add('d-none');
 });
+
 
