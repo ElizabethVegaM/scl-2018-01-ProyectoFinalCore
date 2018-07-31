@@ -40,7 +40,10 @@ body {
   font-weight: 600;
   padding: 2%;
   font-size: 30px;
-  float: right;
+  position: absolute;
+  right: 30%;
+  top: 38%;
+  
   
 }
   
@@ -291,6 +294,13 @@ td p {
     margin-left:auto;
     margin-right:auto;
   }
+  #closeLogin {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    font-size: 20px;
+  }  
+
 }
 @media screen and (min-width: 750px) {
   body{
@@ -303,6 +313,12 @@ td p {
     width: 80vw;
     height: 100vh;
   }
+  #closeLogin {
+    position: absolute;
+    right: 15%;
+    top: 22%;
+  }  
+
   
 }
 /*Ipad de pie*/
@@ -319,5 +335,17 @@ td p {
   #register{
     height: 95vh;
   }
+  #closeLogin {
+    position: absolute;
+    right: 25%;
+    top: 18%;
+  }  
 
+  .nav{
+    text-align: center;
+  }
+  .tab-content {
+  top: 80px;
+  left: 270px;
+  }
 }
