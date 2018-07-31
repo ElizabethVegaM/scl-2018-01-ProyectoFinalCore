@@ -174,10 +174,10 @@
           <div class="residentes">
             <h5>Agrega o Elimina residentes del espacio IF</h5>
           </div>
-          <input type="text" class="form-control" placeholder="Empresa">
-          <input type="email" class="form-control" placeholder="Correo Corporativo">
-          <button>Agregar</button>
-          <button>Eliminar</button>
+          <input type="text" class="form-control" placeholder="Empresa" id="newComapny">
+          <input type="email" class="form-control" placeholder="Correo Corporativo" id="newEmail">
+          <button id="addResident">Agregar</button>
+          <button id="removeResidents">Eliminar</button>
         </div>
       </div>
     </div>
@@ -201,6 +201,11 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  </script>  
   <script src="assets/js/events.js"></script>
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/register.js"></script>
