@@ -23,23 +23,24 @@
   <section id="welcome" class="container-fluid">
     <div class="init">
       <div class="logoBackground">
-       <img src="assets/img/logo.png" alt="logo if">
-       <button id="loginAdmin"><i class="fas fa-sign-in-alt"></i>
-        ADMIN</button>
+        <img src="assets/img/logo.png" alt="logo if">
+        <button id="loginAdmin">
+          <i class="fas fa-sign-in-alt"></i>
+          ADMIN</button>
       </div>
       <div class="col align-self-center">
-       <button id="toRegisterBtn" class="btn btn-primary">Registrar entrada</button>
+        <button id="toRegisterBtn" class="btn btn-primary">Registrar entrada</button>
       </div>
     </div>
-      <div class="container d-none" id="logSection">
-       <i class="fas fa-times" id="closeLogin"></i>
-        <h1>Bienvenido</h1>
-        <form class="form">
-          <input type="email" placeholder="Usuario" id="email">
-          <input type="password" placeholder="Contraseña" id="password">
-          <button type="button" id="loginBtn" onclick="login()">Entrar</button>
-        </form>
-      </div>
+    <div class="container d-none" id="logSection">
+      <i class="fas fa-times" id="closeLogin"></i>
+      <h1>Bienvenido</h1>
+      <form class="form">
+        <input type="email" placeholder="Usuario" id="email">
+        <input type="password" placeholder="Contraseña" id="password">
+        <button type="button" id="loginBtn" onclick="login()">Entrar</button>
+      </form>
+    </div>
   </section>
 
   <!-- Sección de registro -->
@@ -112,7 +113,7 @@
             <p id="photoMessage"></p>
           </label>
         </div>
-        <button id="registerUser" type="button" class="btn btn-primary">REGISTRAR</button>
+        <button id="registerUser" type="submit" class="btn btn-primary">REGISTRAR</button>
       </form>
     </div>
   </section>
@@ -142,7 +143,9 @@
           <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Administrar Residentes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="close-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="close" aria-selected="false" onclick="logout()"> <i class="fas fa-sign-out-alt"> </i>Cerrar Sesión</a>
+          <a class="nav-link" id="close-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="close" aria-selected="false"
+            onclick="logout()">
+            <i class="fas fa-sign-out-alt"> </i>Cerrar Sesión</a>
         </li>
       </ul>
     </aside>

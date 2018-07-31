@@ -45,7 +45,7 @@ photo.addEventListener('change', function(event) {
   });
 });
 
-registerUser.addEventListener('click', () => {
+registerUser.addEventListener('submit', () => {
   visitor = visitorName.value;
   rut = visitorRut.value;
   email = visitorEmail.value;
