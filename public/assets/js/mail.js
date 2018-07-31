@@ -1,4 +1,4 @@
-const sgMail = require('node_modules/@sendgrid/mail');
+const sgMail = require('../../../node_modules/@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const msg = {
   to: 'rav.almasy.ely@gmail.com',
