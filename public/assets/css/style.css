@@ -236,7 +236,7 @@ h1 {
 .tab-content {
   background-color: #fafafa;
   margin-top: 70px;
-  margin-left: 170px;
+  margin-left: 23%;
   width: 75%;
   height: auto;
 }
@@ -307,9 +307,6 @@ td p {
     background-image: url(../img/if.jpg);
     background-size: cover;
     background-position: center;
-  }
-  #toRegisterBtn {
-    margin-top: 25vh;
   }
   .welcomeText {
     font-size: 50px;

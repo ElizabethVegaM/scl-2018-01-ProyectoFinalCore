@@ -27,12 +27,12 @@
     <div class="init">
       <div class="logoBackground">
         <img src="assets/img/logo.png" alt="logo if">
-      </div>
-      <div>
-        <button id="toRegisterBtn" class="btn .btn-lg">Registrar entrada</button>
-        <button id="loginAdmin" class="btn .btn-lg">
+        <button id="loginAdmin">
           <i class="fas fa-sign-in-alt"></i>
           ADMIN</button>
+      </div>
+      <div class="col align-self-center">
+        <button id="toRegisterBtn" class="btn">Registrar entrada</button>
       </div>
     </div>
     <div class="container d-none" id="logSection">
@@ -162,39 +162,36 @@
 
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <div id="dashboardList">
-          <table class="table table-bordered table-responsive-sm">
-            <thead>
-              <tr>
-                <th scope="col" id="visit">Visitante</th>
-                <th scope="col">Ingreso</th>
-                <th scope="col">Anfitrión</th>
-                <th scope="col">Motivo</th>
-              </tr>
-            </thead>
-            <tbody id="bodyDashboard"></tbody>
-          </table>
+        <div>
+          <div id="dashboardList">
+            <table class="table table-bordered table-responsive-sm">
+              <thead>
+                <tr>
+                  <th scope="col" id="visit">Visitante</th>
+                  <th scope="col">Ingreso</th>
+                  <th scope="col">Anfitrión</th>
+                  <th scope="col">Motivo</th>
+                </tr>
+              </thead>
+              <tbody id="bodyDashboard">
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-
-
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        Analitycs
-      </div>
 
+      </div>
       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
         <div class="adminUsers">
           <div class="residentes">
-            <h5>Agrega nueevos residentes al espacio IF</h5>
+            <h5>Agrega o Elimina residentes del espacio IF</h5>
           </div>
           <input type="text" class="form-control" placeholder="Empresa" id="newComapny">
           <input type="email" class="form-control" placeholder="Correo Corporativo" id="newEmail">
           <button id="addResident">Agregar</button>
+          <button id="removeResidents">Eliminar</button>
         </div>
-        <div>
-          <h5>Listado de Residentes IF Blanco</h5>
-        </div>
-        <div id="residentSuccess"></div>
       </div>
     </div>
   </section>
@@ -211,20 +208,12 @@
     };
     firebase.initializeApp(config);
   </script>
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-
-  <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-  google.charts.load('current', {packages: ['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-  </script> -->
-
   <script src="assets/js/events.js"></script>
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/register.js"></script>
