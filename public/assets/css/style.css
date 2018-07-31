@@ -19,24 +19,33 @@ body {
 .form-success .container h1{
   transform: translateY(85px);
 }
+
 .welcomeText{
   font-family: 'Lobster', cursive;
   color: white;
   font-size: 100px;
+
+#closeLogin{
+  color: white;
+  font-weight: 600;
+  padding: 2%;
+  font-size: 30px;
+  float: right;
 }
+  
 .container{
 	max-width: 600px;
-	margin: 0 auto;
-	padding: 80px 0;
-	height: 400px;
-	text-align: center;
+	margin-top: 10%;
+  padding: 2%;
+	height: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.726);
 }	
   
 h1{
 	font-size: 40px;
-	transition-duration: 1s;
-	transition-timing-function: ease-in-put;
   font-weight: 200;
+  color: #fafafa;
 }
 
 .form{
@@ -73,7 +82,8 @@ h1{
 
 #loginBtn{
 	outline: 0;
-	background-color: white;
+  background-color: #222;
+  color: #fafafa;
 	border: 0;
 	padding: 10px 15px;
 	border-radius: 3px;
@@ -84,6 +94,7 @@ h1{
 
 #loginBtn:hover{
   background-color: rgb(245, 247, 249);
+  color: #222;
 }
 
 #welcome, #register, #succes{
