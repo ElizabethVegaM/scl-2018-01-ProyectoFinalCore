@@ -27,12 +27,12 @@
     <div class="init">
       <div class="logoBackground">
         <img src="assets/img/logo.png" alt="logo if">
-        <button id="loginAdmin">
+      </div>
+      <div>
+        <button id="toRegisterBtn" class="btn .btn-lg">Registrar entrada</button>
+        <button id="loginAdmin" class="btn .btn-lg">
           <i class="fas fa-sign-in-alt"></i>
           ADMIN</button>
-      </div>
-      <div class="col align-self-center">
-        <button id="toRegisterBtn" class="btn btn-primary">Registrar entrada</button>
       </div>
     </div>
     <div class="container d-none" id="logSection">
@@ -48,12 +48,8 @@
 
   <!-- Sección de registro -->
   <section id="register" class="d-none">
-    <div class="container-fluid">
-      <!-- 
-    <div class="circle">
-      <img id="profilePic" class="profile-pic" src="">
-    </div>
-     -->
+    <div class="container-fluid formContainer">
+      <i class="fas fa-times" id="closeRegister"></i>
       <div class="logoRegister">
         <img src="assets/img/logo.png" alt="logo if">
       </div>
@@ -65,7 +61,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="visitorRut">RUT</label>
-            <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT" required>
+            <input type="text" id="visitorRut" class="form-control" placeholder="Ingrese RUT">
           </div>
         </div>
         <div class="form-group">
@@ -75,7 +71,7 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="visitorCompany">Empresa</label>
-            <input id="visitorCompany" type="text" class="form-control" placeholder="Ingrese empresa">
+            <input id="visitorCompany" type="text" name="user_company" class="form-control" placeholder="Ingrese empresa">
           </div>
           <div class="form-group col-md-6">
             <label for="visitorLicensePlate">Patente vehículo</label>
@@ -85,7 +81,7 @@
         <div class="form-row">
           <div id="companyContainer" class="form-group col-md-6">
             <label for="inputCompany">Empresa a visitar</label>
-            <select id="inputCompany" class="form-control" required>
+            <select id="inputCompany" name="company" class="form-control" required>
               <option>Elestudio</option>
               <option>Robotics Lab</option>
               <option>Fábrica de Medios</option>
@@ -103,7 +99,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="inputReason">Motivo de la visita</label>
-            <select id="inputReason" class="form-control" required>
+            <select id="inputReason" name="reason" class="form-control" required>
               <option>Entrevista</option>
               <option>Reunión</option>
               <option>Social</option>
@@ -112,21 +108,29 @@
             </select>
           </div>
         </div>
+        <div class="form-group col-md-6 offset-3">
+          <label for="companyMail">Correo receptor</label>
+          <select id="companyMail" name="company_email" class="form-control" required>
+            <option>eb.vega.m@gmail.com</option>
+            <option>cindy.lopezoportus@gmail.com</option>
+            <option>carolinadelgadob@gmail.com</option>
+          </select>
+        </div>
         <div id="cameraIcon" class="form-group">
           <label for="photo" class="cameraButton">
             <i class="fas fa-camera"></i>
-            <input id="photo" accept="image/*" type="file" capture="camera">
+            <input id="photo" name="photo" accept="image/*" type="file" capture="camera">
             <p id="photoMessage"></p>
           </label>
         </div>
         <button type="submit" class="btn">ENVIAR</button>
       </form>
-    </div>
-  </section>
-  <section id="succes" class="d-none">
-    <div class="container">
-      <h1>Bienvenido a IF Blanco</h1>
-      <h2> Tu visita a sido registrada con éxito</h2>
+      <section id="success" class="d-none">
+        <div class="container">
+          <h1>Bienvenido a IF Blanco</h1>
+          <h2> Tu visita a sido registrada con éxito</h2>
+        </div>
+      </section>
     </div>
   </section>
 
