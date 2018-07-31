@@ -272,7 +272,7 @@ td p {
 .adminUsers {
   height: 74vh;
   text-align: center;
-  margin: 10%;
+  margin: 0%;
   padding: 5%;
 }
 
@@ -289,7 +289,7 @@ td p {
   background-color: rgba(0, 0, 0, 0.726);
   color: #fafafa;
   padding: 1%;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .residentes {
