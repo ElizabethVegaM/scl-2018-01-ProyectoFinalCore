@@ -9,16 +9,16 @@ data.addEventListener('click', () =>{
 });
 
 let $table = $('#table');
-    $(function () {
-        $('#toolbar').find('select').change(function () {
-            $table.bootstrapTable('refreshOptions', {
-                exportDataType: $(this).val()
-            });
-        });
-    })
+$(function() {
+  $('#toolbar').find('select').change(function() {
+    $table.bootstrapTable('refreshOptions', {
+      exportDataType: $(this).val()
+    });
+  });
+});
 
-		var trBoldBlue = $("table");
+var trBoldBlue = $('table');
 
-	$(trBoldBlue).on("click", "tr", function (){
-			$(this).toggleClass("bold-blue");
-	});
+$(trBoldBlue).on('click', 'tr', function() {
+  $(this).toggleClass('bold-blue');
+});
