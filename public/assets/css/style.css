@@ -4,32 +4,36 @@ body {
   background-size: 100%;
   text-align: center;
 }
+
 /*botones de entrada*/
-.btn-block{
+
+.btn-block {
   height: 4em;
   background-color: gray;
   border: none;
 }
 
-.btn-block:hover{
+.btn-block:hover {
   background-color: #F3BF05;
 }
+
 /* login */
-.wrapper{
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	height: 400px;
-	margin-top: -200px;
-	overflow: hidden;
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  margin-top: -200px;
+  overflow: hidden;
 }
 
-.form-success .container h1{
+.form-success .container h1 {
   transform: translateY(85px);
 }
 
-.welcomeText{
+.welcomeText {
   font-family: 'Lobster', cursive;
   color: white;
   font-size: 100px;
@@ -43,112 +47,118 @@ body {
   position: absolute;
   right: 30%;
   top: 38%;
-  
-  
 }
-  
-.container{
-	max-width: 600px;
+
+.container {
+  max-width: 600px;
   padding: 2%;
-  margin-top: 20%;
-  height: auto;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.726);
-}	
-  
-h1{
-	font-size: 40px;
+}
+
+h1 {
+  font-size: 40px;
   font-weight: 200;
   color: #fafafa;
 }
 
-.form{
-	padding: 20px 0;
-	position: relative;
-	z-index: 2;
+.form {
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
 }
-.logoRegister{
+
+.logoRegister {
   text-align: center;
   margin-bottom: 5%;
 }
-#email, 
-#password{
-	display: block;
-	outline: 0;
-	border: 1px solid white, 40%;
-	background-color: white, 20%;
-	width: 250px;
-	border-radius: 3px;
-	padding: 10px 15px;
-	margin: 0 auto 10px auto;
-	display: block;
-	text-align: center;
-	font-size: 18px;	
-	color: black;
-	transition-duration: 0.25s;
-	font-weight: 300;
- }
 
-#email:focus, #password:focus{
-	background-color: white;
-	width: 300px;
-  }
-
-#loginBtn{
-	outline: 0;
-  background-color: #222;
-  color: #fafafa;
-	border: 0;
-	padding: 10px 15px;
-	border-radius: 3px;
-	width: 250px;
-	cursor: pointer;
-	font-size: 18px;
+#email,
+#password {
+  display: block;
+  outline: 0;
+  border: 1px solid white, 40%;
+  background-color: white, 20%;
+  width: 250px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  transition-duration: 0.25s;
+  font-weight: 300;
 }
 
-#loginBtn:hover{
+#email:focus,
+#password:focus {
+  background-color: white;
+  width: 300px;
+}
+
+#loginBtn {
+  outline: 0;
+  background-color: #222;
+  color: #fafafa;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#loginBtn:hover {
   background-color: rgb(245, 247, 249);
   color: #222;
 }
 
-#welcome, #register, #succes{
+#welcome,
+#register {
   width: 100vw;
   height: 100vh;
 }
-.cameraButton{
+
+.cameraButton {
   display: inline-block;
 }
-#cameraIcon{
+
+#cameraIcon {
   text-align: center;
 }
 
-.logoBackground{
-  background-color:  rgba(0, 0, 0, 0.726);
+.logoBackground {
+  background-color: rgba(0, 0, 0, 0.726);
   width: 100%;
   text-align: center;
 }
 
-#toRegisterBtn{
+#toRegisterBtn {
   margin-top: 35vh;
 }
 
-#register, #succes{
-  background-color: rgba(0, 0, 0, 0.726);
+/* Formulario de registro */
+
+.formContainer {
   color: #fafafa;
-  width: 80vw;
-  height: 60vh;
-  padding: 30px;
-  margin-left: 10vw;
+  margin-top: 5vh;
+  background-color: rgba(0, 0, 0, 0.726);
+  padding: 60px;
 }
 
-/* Formulario de registro */
+#closeRegister {
+  float: right;
+}
+
 .registerForm {
   text-align: initial;
 }
-#registerUser{
-  vertical-align: center;
-  height: 3em;
+
+#registerVisitor button {
+  position: absolute;
+  left: 45vw;
 }
+
 .cameraButton {
   display: inline-block;
   margin: auto;
@@ -162,17 +172,6 @@ h1{
   display: none;
 }
 
-.circle {
-  margin: auto;
-  margin-bottom: 2vh;
-  border-radius: 1000px !important;
-  overflow: hidden;
-  width: 125px;
-  height: 125px;
-  border: 5px solid rgba(255, 255, 255, 0.7);
-  background-color: #fafafa;
-}
-
 .profile-pic {
   max-width: 200px;
   max-height: 200px;
@@ -180,11 +179,11 @@ h1{
   margin-right: -100px;
 }
 
-#dashboard{
+#dashboard {
   height: inherit;
 }
 
-.dashHeader{
+.dashHeader {
   background-color: #222;
   position: fixed;
   top: 0px;
@@ -208,7 +207,7 @@ h1{
   padding-bottom: 40px;
 }
 
-.nav-link{
+.nav-link {
   color: #fafafa;
 }
 
@@ -230,7 +229,7 @@ h1{
   background-color: #222;
 }
 
-.tab-content{
+.tab-content {
   background-color: #fafafa;
   position: fixed;
   top: 70px;
@@ -239,29 +238,30 @@ h1{
   height: auto;
 }
 
-table{
+table {
   width: 90%;
 }
 
-#close-tab{
+#close-tab {
   position: fixed;
   bottom: 2px;
 }
 
-#visit{
+#visit {
   padding: 2% 10%;
   width: 40%;
 }
 
 .bold-blue {
-	font-weight: bold;
-	color: #0277BD;
+  font-weight: bold;
+  color: #0277BD;
 }
-#bodyDashboard{
+
+#bodyDashboard {
   overflow: auto;
 }
 
-td{
+td {
   padding: 1%;
 }
 
@@ -269,20 +269,21 @@ td p {
   margin: 1%;
 }
 
-.adminUsers{
+.adminUsers {
   height: 74vh;
   text-align: center;
   margin: 10%;
   padding: 5%;
 }
 
-.adminUsers input{
+.adminUsers input {
   display: block;
   width: 100%;
   padding: 3%;
   margin-bottom: 2%;
 }
-.adminUsers button{
+
+.adminUsers button {
   width: 40%;
   margin: 3%;
   background-color: rgba(0, 0, 0, 0.726);
@@ -291,7 +292,7 @@ td p {
   font-size: 22px;
 }
 
-.residentes{
+.residentes {
   margin-bottom: 5%;
   padding: 3%;
   background-color: rgba(0, 0, 0, 0.66);
@@ -299,47 +300,43 @@ td p {
 }
 
 @media screen and (min-width: 320px) {
-  body{
+  body {
     background-image: url(../img/if.jpg);
     background-size: cover;
     background-position: center;
   }
-  #toRegisterBtn{
+  #toRegisterBtn {
     margin-top: 25vh;
-  } 
-    
-  .welcomeText{
+  }
+  .welcomeText {
     font-size: 50px;
-  } 
-
-  #register, #succes{
-    background-color: rgba(0, 0, 0, 0.726);
-    color: #fafafa;
+  }
+  #register {
     width: 80vw;
     height: 150vh;
     padding: 30px;
     margin-left: 10vw;
   }
   .iconButton {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   #closeLogin {
     position: absolute;
     right: 5%;
     top: 20%;
     font-size: 20px;
-  }  
-
-}
-@media screen and (min-width: 750px) {
-  body{
-  background-image: url(../img/if.jpg);
-  background-size: cover;
-  background-position: center;
-  
   }
-  #welcome, #register {
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    background-image: url(../img/if.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  #welcome,
+  #register {
     width: 80vw;
     height: 100vh;
   }
@@ -347,35 +344,34 @@ td p {
     position: absolute;
     right: 15%;
     top: 22%;
-  }  
-
-  
+  }
 }
+
 /*Ipad de pie*/
+
 @media screen and (min-width: 1024px) {
-  body{
+  body {
     background-image: url(../img/if.jpg);
     background-size: cover;
     background-position: center;
   }
   /*botones de entrada*/
-  .btn-block{
+  .btn-block {
     font-size: 25px;
   }
-  #register{
+  #register {
     height: 95vh;
   }
   #closeLogin {
     position: absolute;
     right: 25%;
     top: 18%;
-  }  
-
-  .nav{
+  }
+  .nav {
     text-align: center;
   }
   .tab-content {
-  top: 80px;
-  left: 270px;
+    top: 80px;
+    left: 270px;
   }
 }
