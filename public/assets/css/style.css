@@ -19,7 +19,11 @@ body {
 .form-success .container h1{
   transform: translateY(85px);
 }
-
+.welcomeText{
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 100px;
+}
 .container{
 	max-width: 600px;
 	margin: 0 auto;
@@ -40,7 +44,10 @@ h1{
 	position: relative;
 	z-index: 2;
 }
-
+.logoRegister{
+  text-align: center;
+  margin-bottom: 5%;
+}
 #email, 
 #password{
 	display: block;
@@ -83,6 +90,12 @@ h1{
   width: 100vw;
   height: 100vh;
 }
+.cameraButton{
+  display: inline-block;
+}
+#cameraIcon{
+  text-align: center;
+}
 
 .logoBackground{
   background-color:  rgba(0, 0, 0, 0.726);
@@ -107,7 +120,9 @@ h1{
 .registerForm {
   text-align: initial;
 }
-
+#registerUser{
+  vertical-align: center;
+}
 .cameraButton {
   display: inline-block;
   margin: auto;
@@ -227,7 +242,20 @@ td{
 td p {
   margin: 1%;
 }
-
+@media screen and (min-width: 320px) {
+  body{
+    background-image: url(../img/if.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  #toRegisterBtn{
+    margin-top: 25vh;
+  } 
+    
+  .welcomeText{
+    font-size: 50px;
+  } 
+}
 @media screen and (min-width: 750px) {
   body{
   background-image: url(../img/if.jpg);
