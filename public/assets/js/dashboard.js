@@ -1,5 +1,5 @@
 // Tabla Dashboard
-firebase.database().ref('visitors')
+firebase.database().ref('visitors').orderByChild('time')
   .limitToLast(100)
   .on('child_added', (newVisitor) => {
     const month = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
