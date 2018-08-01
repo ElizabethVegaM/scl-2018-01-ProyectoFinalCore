@@ -47,11 +47,13 @@ firebase.database().ref('residents')
     newEmail.value = '';
     residentSuccess.innerHTML += `
   <div class="sectionInfoResident">
+  <div class="users">
   <p class="new">Residente: <span>${newResident.val().company}</span></p>
   <p class="new">Correo Corporativo: <span>${newResident.val().emailCompany}</span></p>
   </div>
   <i id="${newResident.key}-trash" class="fas fa-trash" data-id="${newResident.key}" onclick="deleteResident(event)"></i>
   <hr>
+  </div>
   `; 
   });        
 
