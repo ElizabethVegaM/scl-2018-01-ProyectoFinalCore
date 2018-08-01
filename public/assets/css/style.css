@@ -6,11 +6,15 @@ body {
 }
 
 /*botones de entrada*/
-
+.btns{
+  margin-top: 30%;
+}
 .btn-block {
   height: 4em;
   background-color: gray;
   border: none;
+  color: #fafafa;
+  font-size: 25px;
 }
 
 .btn-block:hover {
@@ -74,7 +78,7 @@ h1 {
 
 #logSection {
   background-color: rgba(0, 0, 0, 0.726);
-  margin-top: 20vh;
+  margin-top: -7vh;
 }
 
 #email,
@@ -136,10 +140,6 @@ h1 {
   background-color: rgba(0, 0, 0, 0.726);
   width: 100%;
   text-align: center;
-}
-
-#toRegisterBtn {
-  margin-top: 35vh;
 }
 
 /* Formulario de registro */
@@ -252,8 +252,8 @@ table {
 #close-tab {
   position: fixed;
   bottom: 15px;
-  left: 10px;
-  width: 19%;
+  padding: 2%;
+  width: 20%;
 }
 
 #visit {
@@ -273,6 +273,12 @@ td {
 .contentBody{
   height: 87vh;
   overflow: scroll;
+}
+
+.fa-trash{
+  color: #fafafa;
+  font-size: 22px;
+  margin-left: 95%;
 }
 
 td p {

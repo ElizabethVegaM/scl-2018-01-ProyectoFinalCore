@@ -6,8 +6,8 @@ firebase.database().ref('visitors').orderByChild('time')
     const time = new Date(newVisitor.val().time);
     bodyDashboard.innerHTML += `
       <tr>
-        <td class="button modal-button" data-target="#a${newVisitor.key}">
-          <img class="avatar-pic" id="avatarPic" src="${newVisitor.val().photo}"></img>
+        <td>
+          <img class="avatar-pic" id="avatarPic" src="${newVisitor.val().photo}" data-toggle="modal" data-target="#a${newVisitor.key}"></img>
           <p>${newVisitor.val().name}</p>
           <p>"${newVisitor.val().company.toUpperCase()}"</p>
         </td>
@@ -20,14 +20,22 @@ firebase.database().ref('visitors').orderByChild('time')
         </td>
         <td>${newVisitor.val().reason}</td>
       </tr>
-      <div id="a${newVisitor.key}" class="modal modal-fx-fadeInScale">
-      <div class="modal-background"></div>
-      <div class="modal-content"> 
-        <p>Correo: ${newVisitor.val().email}</p>
-        <p>RUT: ${newVisitor.val().rut}</p>
-        <p>Patente: ${newVisitor.val().licensePlate}</p>
-      <button class="modal-close is-large" aria-label="close"><i class="fas fa-times" id="closeLogin"></i></button>
-      </div>
+      <div id="a${newVisitor.key}"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content"> 
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Contacto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Correo: ${newVisitor.val().email}</p>
+              <p>RUT: ${newVisitor.val().rut}</p>
+              <p>Patente: ${newVisitor.val().licensePlate}</p>
+            </div>
+          </div>
+        </div>    
       </div>
     `;
   });
@@ -47,8 +55,10 @@ firebase.database().ref('residents')
     newEmail.value = '';
     residentSuccess.innerHTML += `
   <div class="sectionInfoResident">
+  <div class="users">
   <p class="new">Residente: <span>${newResident.val().company}</span></p>
   <p class="new">Correo Corporativo: <span>${newResident.val().emailCompany}</span></p>
+  </div>
   <i id="${newResident.key}-trash" class="fas fa-trash" data-id="${newResident.key}" onclick="deleteResident(event)"></i>
   <hr>
   </div>
@@ -64,28 +74,4 @@ function deleteResident(event) {
     residentSuccess.removeChild(residentSuccess.childNodes[0] && residentSuccess.childNodes[1]);
   } else {
   }
-}
-
-function drawChart() {
-  let dataTable = new google.visualization.DataTable();
-  dataTable.addColumn({ type: 'date',
-    id: 'Date' });
-  dataTable.addColumn({ type: 'number',
-    id: 'Won/Loss' });
-  dataTable.addRows([
-    [ new Date(2012, 3, 13), 37032 ],
-    [ new Date(2012, 3, 14), 38024 ],
-    [ new Date(2012, 3, 15), 38024 ],
-    [ new Date(2012, 3, 16), 38108 ],
-    [ new Date(2012, 3, 17), 38229 ],
-  ]);
-
-  let chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
-
-  let options = {
-    title: 'Visitas Diarias',
-    height: 350,
-  };
-
-  chart.draw(dataTable, options);
 }
