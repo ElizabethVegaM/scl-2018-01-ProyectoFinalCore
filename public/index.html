@@ -161,9 +161,10 @@
     </aside>
 
     <div class="tab-content" id="myTabContent">
+
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <div>
-          <div id="dashboardList">
+        <div id="dashboardList">
+          <div class="contentBody">
             <table class="table table-bordered table-responsive-sm">
               <thead>
                 <tr>
@@ -173,25 +174,30 @@
                   <th scope="col">Motivo</th>
                 </tr>
               </thead>
-              <tbody id="bodyDashboard">
-              </tbody>
+              <tbody id="bodyDashboard"></tbody>
             </table>
           </div>
         </div>
       </div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div id="calendar_basic"></div>
       </div>
+
       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
         <div class="adminUsers">
           <div class="residentes">
-            <h5>Agrega o Elimina residentes del espacio IF</h5>
+            <h5>Agrega nuevos residentes al espacio IF</h5>
           </div>
           <input type="text" class="form-control" placeholder="Empresa" id="newComapny">
           <input type="email" class="form-control" placeholder="Correo Corporativo" id="newEmail">
           <button id="addResident">Agregar</button>
-          <button id="removeResidents">Eliminar</button>
         </div>
+        <div>
+          <h5>Listado de Residentes IF Blanco</h5>
+          <hr>
+        </div>
+        <div id="residentSuccess"></div>
       </div>
     </div>
   </section>
@@ -214,6 +220,12 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    google.charts.load("current", { 'packages': ["calendar"] });
+    google.charts.setOnLoadCallback(drawChart);
+  </script>
+
   <script src="assets/js/events.js"></script>
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/register.js"></script>
