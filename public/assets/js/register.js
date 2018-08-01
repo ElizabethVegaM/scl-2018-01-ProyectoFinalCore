@@ -71,7 +71,6 @@ registerVisitor.addEventListener('submit', (event) => {
   welcome.classList.add('d-none');
   success.classList.remove('d-none');
   registerVisitor.classList.add('d-none');
-  registerVisitor.reset();
   photoMessage.innerHTML = '';
 });
 

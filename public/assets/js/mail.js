@@ -1,4 +1,4 @@
- (function() {
+(function() {
   emailjs.init('user_ef1rlb3A7ij2cRlx3N1MY');
 })();
 
