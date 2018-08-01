@@ -252,8 +252,8 @@ table {
 #close-tab {
   position: fixed;
   bottom: 15px;
-  left: 10px;
-  width: 19%;
+  padding: 2%;
+  width: 20%;
 }
 
 #visit {
@@ -273,6 +273,12 @@ td {
 .contentBody{
   height: 87vh;
   overflow: scroll;
+}
+
+.fa-trash{
+  color: #fafafa;
+  font-size: 22px;
+  margin: 95%;
 }
 
 td p {
