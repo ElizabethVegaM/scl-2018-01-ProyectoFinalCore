@@ -33,21 +33,21 @@ addResident.addEventListener('click', () => {
 });  
   
 firebase.database().ref('residents')
-.on('child_added', (newResident) => { 
-  newComapny.value = '';
-  newEmail.value = '';
-  residentSuccess.innerHTML +=`
+  .on('child_added', (newResident) => { 
+    newComapny.value = '';
+    newEmail.value = '';
+    residentSuccess.innerHTML += `
   <div class="sectionInfoResident">
   <p class="new">Residente: <span>${newResident.val().company}</span></p>
   <p class="new">Correo Corporativo: <span>${newResident.val().emailCompany}</span></p>
   <i id="${newResident.key}-trash" class="fas fa-trash" data-id="${newResident.key}" onclick="deleteResident(event)"></i>
   <hr>
   </div>
-  ` 
-});        
+  `; 
+  });        
 
 function deleteResident(event) {
-  if (confirm("¿Estás seguro de eliminar este Residente?")) {
+  if (confirm('¿Estás seguro de eliminar este Residente?')) {
     event.stopPropagation();
     const residentId = event.target.getAttribute('data-id');
     const residentRef = firebase.database().ref('residents').child(residentId);
@@ -58,10 +58,12 @@ function deleteResident(event) {
 }
 
 function drawChart() {
- let dataTable = new google.visualization.DataTable();
- dataTable.addColumn({ type: 'date', id: 'Date' });
- dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
- dataTable.addRows([
+  let dataTable = new google.visualization.DataTable();
+  dataTable.addColumn({ type: 'date',
+    id: 'Date' });
+  dataTable.addColumn({ type: 'number',
+    id: 'Won/Loss' });
+  dataTable.addRows([
     [ new Date(2012, 3, 13), 37032 ],
     [ new Date(2012, 3, 14), 38024 ],
     [ new Date(2012, 3, 15), 38024 ],
@@ -69,12 +71,12 @@ function drawChart() {
     [ new Date(2012, 3, 17), 38229 ],
   ]);
 
- let chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+  let chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
 
- let options = {
-   title: "Visitas Diarias",
-   height: 350,
- };
+  let options = {
+    title: 'Visitas Diarias',
+    height: 350,
+  };
 
- chart.draw(dataTable, options);
+  chart.draw(dataTable, options);
 }
