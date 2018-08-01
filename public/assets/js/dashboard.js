@@ -8,12 +8,12 @@ firebase.database().ref('visitors')
       <tr>
         <td>
           <img class="avatar-pic" id="avatarPic" src="${newVisitor.val().photo}"></img>
-          <p>${newVisitor.val().name}/</p>
-          <p>${newVisitor.val().company.toUpperCase()}</p>
+          <p>${newVisitor.val().name}</p>
+          <p>"${newVisitor.val().company.toUpperCase()}"</p>
         </td>
         <td>
           <p>${time.getDate()}/${month[time.getMonth()]}</p> 
-          <p>0${time.getHours()}:${time.getMinutes()}</p>
+          <p>${time.getHours()}:${time.getMinutes()}</p>
         </td>
         <td>
           <p>${newVisitor.val().companyToVisit}</p>
@@ -37,9 +37,11 @@ firebase.database().ref('residents')
   newComapny.value = '';
   newEmail.value = '';
   residentSuccess.innerHTML +=`
+  <div class="sectionInfoResident">
   <p class="new">Residente: <span>${newResident.val().company}</span></p>
   <p class="new">Correo Corporativo: <span>${newResident.val().emailCompany}</span></p>
   <hr>
+  </div>
   ` 
 });        
 
