@@ -40,10 +40,22 @@ firebase.database().ref('residents')
   <div class="sectionInfoResident">
   <p class="new">Residente: <span>${newResident.val().company}</span></p>
   <p class="new">Correo Corporativo: <span>${newResident.val().emailCompany}</span></p>
+  <i id="${newResident.key}-trash" class="fas fa-trash" data-id="${newResident.key}" onclick="deleteResident(event)"></i>
   <hr>
   </div>
   ` 
 });        
+
+function deleteResident(event) {
+  if (confirm("¿Estás seguro de eliminar este Residente?")) {
+    event.stopPropagation();
+    const residentId = event.target.getAttribute('data-id');
+    const residentRef = firebase.database().ref('residents').child(residentId);
+    residentRef.remove();
+    residentSuccess.removeChild(residentSuccess.childNodes[0] && residentSuccess.childNodes[1]);
+  } else {
+  }
+}
 
 function drawChart() {
  let dataTable = new google.visualization.DataTable();
