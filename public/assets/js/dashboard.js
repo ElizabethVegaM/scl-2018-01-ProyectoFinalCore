@@ -6,8 +6,8 @@ firebase.database().ref('visitors').orderByChild('time')
     const time = new Date(newVisitor.val().time);
     bodyDashboard.innerHTML += `
       <tr>
-        <td data-target="#a${newVisitor.key}">
-          <img class="avatar-pic" id="avatarPic" src="${newVisitor.val().photo}"></img>
+        <td>
+          <img class="avatar-pic" id="avatarPic" src="${newVisitor.val().photo}" data-toggle="modal" data-target="#a${newVisitor.key}"></img>
           <p>${newVisitor.val().name}</p>
           <p>"${newVisitor.val().company.toUpperCase()}"</p>
         </td>
@@ -20,14 +20,22 @@ firebase.database().ref('visitors').orderByChild('time')
         </td>
         <td>${newVisitor.val().reason}</td>
       </tr>
-      <div id="a${newVisitor.key}" class="modal modal-fx-fadeInScale">
-      <div class="modal-background"></div>
-      <div class="modal-content"> 
-        <p>Correo: ${newVisitor.val().email}</p>
-        <p>RUT: ${newVisitor.val().rut}</p>
-        <p>Patente: ${newVisitor.val().licensePlate}</p>
-      <button class="modal-close is-large" aria-label="close"><i class="fas fa-times" id="closeLogin"></i></button>
-      </div>
+      <div id="a${newVisitor.key}"class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content"> 
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Contacto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Correo: ${newVisitor.val().email}</p>
+              <p>RUT: ${newVisitor.val().rut}</p>
+              <p>Patente: ${newVisitor.val().licensePlate}</p>
+            </div>
+          </div>
+        </div>    
       </div>
     `;
   });
