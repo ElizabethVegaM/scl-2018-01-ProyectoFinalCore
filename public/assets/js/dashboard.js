@@ -6,7 +6,7 @@ firebase.database().ref('visitors').orderByChild('time')
     const time = new Date(newVisitor.val().time);
     bodyDashboard.innerHTML += `
       <tr>
-        <td>
+        <td class="button modal-button" data-target="#a${newVisitor.key}">
           <img class="avatar-pic" id="avatarPic" src="${newVisitor.val().photo}"></img>
           <p>${newVisitor.val().name}</p>
           <p>"${newVisitor.val().company.toUpperCase()}"</p>
@@ -19,7 +19,16 @@ firebase.database().ref('visitors').orderByChild('time')
           <p>${newVisitor.val().companyToVisit}</p>
         </td>
         <td>${newVisitor.val().reason}</td>
-       </tr>
+      </tr>
+      <div id="a${newVisitor.key}" class="modal modal-fx-fadeInScale">
+      <div class="modal-background"></div>
+      <div class="modal-content"> 
+        <p>Correo: ${newVisitor.val().email}</p>
+        <p>RUT: ${newVisitor.val().rut}</p>
+        <p>Patente: ${newVisitor.val().licensePlate}</p>
+      <button class="modal-close is-large" aria-label="close"><i class="fas fa-times" id="closeLogin"></i></button>
+      </div>
+      </div>
     `;
   });
 
@@ -30,8 +39,8 @@ addResident.addEventListener('click', () => {
     company: newComapny.value,
     emailCompany: newEmail.value,
   });
-});  
-  
+});
+
 firebase.database().ref('residents')
   .on('child_added', (newResident) => { 
     newComapny.value = '';
