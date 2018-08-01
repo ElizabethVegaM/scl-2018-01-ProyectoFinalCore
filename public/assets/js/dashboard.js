@@ -45,21 +45,24 @@ firebase.database().ref('residents')
   ` 
 });        
 
+function drawChart() {
+ let dataTable = new google.visualization.DataTable();
+ dataTable.addColumn({ type: 'date', id: 'Date' });
+ dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
+ dataTable.addRows([
+    [ new Date(2012, 3, 13), 37032 ],
+    [ new Date(2012, 3, 14), 38024 ],
+    [ new Date(2012, 3, 15), 38024 ],
+    [ new Date(2012, 3, 16), 38108 ],
+    [ new Date(2012, 3, 17), 38229 ],
+  ]);
 
-// function drawChart() {
-//   var dataTable = new google.visualization.DataTable();
-//   dataTable.addColumn({ type: 'date', id: 'Date' });
-//   dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
-//   dataTable.addRows([
-//     [time.getDate(), newVisitor.val().name]
-//    ]);
+ let chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
 
-//   var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+ let options = {
+   title: "Visitas Diarias",
+   height: 350,
+ };
 
-//   var options = {
-//     title: "Red Sox Attendance",
-//     height: 350,
-//   };
-
-//   chart.draw(dataTable, options);
-// }
+ chart.draw(dataTable, options);
+}
